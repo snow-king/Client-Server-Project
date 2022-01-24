@@ -7,7 +7,9 @@ namespace Server
         static void Main(string[] args)
         {
             // TODO: отдельный обект Runner для запуска исолнения и более удобного оборачивания в отдельный поток
-            Console.WriteLine("Hello World!");
+            Runner runner = new Runner();
+            runner.Run();
+            
         }
     }
 
@@ -22,6 +24,12 @@ namespace Server
         public void Run() 
         {
             // TODO: вывести инфомрация из бд по нажатию любой кнопки
+            Console.WriteLine("Нажмите любую клавишу чтобы продолжить... ");
+            Console.ReadKey();
+            SQLConnector con = new SQLConnector();
+            Console.WriteLine(con.SelectTimeTable());
+
+            Console.ReadKey();
         }
     }
 }
