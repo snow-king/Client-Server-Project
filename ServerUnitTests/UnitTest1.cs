@@ -8,7 +8,7 @@ namespace ServerUnitTests
         private SQLConnector Connector;
 
         /// <summary>
-        /// Проверка создания подключения 
+        /// РџСЂРѕРІРµСЂРєР° СЃРѕР·РґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ 
         /// </summary>
         [Test]
         public void Connection_Create_Does_Not_Throw()
@@ -16,7 +16,7 @@ namespace ServerUnitTests
             Assert.DoesNotThrow(() => new SQLConnector());
         }
         /// <summary>
-        /// Проверка исполнения запросов к табоице 
+        /// РџСЂРѕРІРµСЂРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ Р·Р°РїСЂРѕСЃРѕРІ Рє С‚Р°Р±РѕРёС†Рµ 
         /// </summary>
         [Test]
         public void Requests_Does_Not_Throw()
