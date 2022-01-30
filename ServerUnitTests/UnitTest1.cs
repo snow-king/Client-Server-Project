@@ -5,30 +5,24 @@ namespace ServerUnitTests
 {
     public class Tests
     {
-        public SQLConnector Connector;
+        private SQLConnector Connector;
 
-        [SetUp]
-        public void SetUp()
+        /// <summary>
+        /// РџСЂРѕРІРµСЂРєР° СЃРѕР·РґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ 
+        /// </summary>
+        [Test]
+        public void Connection_Create_Does_Not_Throw()
+        {
+            Assert.DoesNotThrow(() => new SQLConnector());
+        }
+        /// <summary>
+        /// РџСЂРѕРІРµСЂРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ Р·Р°РїСЂРѕСЃРѕРІ Рє С‚Р°Р±РѕРёС†Рµ 
+        /// </summary>
+        [Test]
+        public void Requests_Does_Not_Throw()
         {
             var Connector = new SQLConnector();
-        }
-        /// <summary>
-        /// Проверка создания подключения 
-        /// </summary>
-        [Test]
-        public void Connection_Create_Not_Null()
-        {
-            Assert.IsNotNull(Connector.Connection);
-        }
-
-        /// <summary>
-        /// Проверка исполнения запросов к табоице 
-        /// </summary>
-        [Test]
-        public void Requests_Exequte_Returns_Not_Null()
-        {
-            var result = Connector.SelectTimeTable();
-            Assert.IsNotNull(result);
+            Assert.DoesNotThrow(() => Connector.SelectTimeTable());
         }
     }
 }
