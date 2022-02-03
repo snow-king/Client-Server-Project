@@ -10,8 +10,10 @@ namespace Server
         {
             connection = gettedConnection;
         }
-        public String getLessonsByProffesor(int proffesorId) {
-            //print all lessons for selected proffesssor
+
+        public String getLessonsByProffesor(int professorId) {
+            //вывести все занятия по id профессора
+
             String res = "";
             try
             {
@@ -44,9 +46,11 @@ namespace Server
             }
             return res;
         }
+
         public String getAll()
         {
-            //print all from timetable
+            //вывести всё что есть в главной таблице
+
             String res = "";
             try
             {
