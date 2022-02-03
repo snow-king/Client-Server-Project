@@ -15,6 +15,7 @@ namespace Server
             try
             {
                 connection.Open();
+
                 //заполнение главной таблицы
                 MySqlCommand timetableIns = new MySqlCommand("INSERT INTO timetabledb.timetable (idlesson_time, idweek_parity, idweekday, idclassroom, idstudy_groups,idprofessors, idlesson, idlesson_type) " +
                 "VALUES(@lesstime, @weekchet,@dayweek,@classroom,@group,@professor,@lesson,@lesstype);", connection);
@@ -43,7 +44,9 @@ namespace Server
             try
             {
                 connection.Open();
+
                 //заполнение таблицы с аудиториями
+
                 String classroom =inData;
                 MySqlCommand classroomIns = new MySqlCommand("INSERT INTO timetabledb.classroom (location) VALUES (@classroom);", connection);
                 classroomIns.Parameters.AddWithValue("@classroom", classroom);
@@ -64,7 +67,9 @@ namespace Server
             try
             {
                 connection.Open();
+
                 //заполнение таблицы с предметами
+
                 String discipline =inData;
                 MySqlCommand disciplineIns = new MySqlCommand("INSERT INTO timetabledb.discipline (namediscipline) VALUES (@discipline);", connection);
                 disciplineIns.Parameters.AddWithValue("@discipline", discipline);
@@ -85,7 +90,9 @@ namespace Server
             try
             {
                 connection.Open();
+
                 //заполнение таблицы с занятиями
+
                 MySqlCommand lesson_timeIns = new MySqlCommand("INSERT INTO timetabledb.lesson_time (lesson_number) VALUES (@lesson_time);", connection);
                 lesson_timeIns.Parameters.AddWithValue("@lesson_time", inData);
                 lesson_timeIns.Prepare();
@@ -105,7 +112,9 @@ namespace Server
             try
             {
                 connection.Open();
+
                 //заполнение таблицы с видами занятий
+
                 String lesson_type = inData;
                 MySqlCommand lesson_typeIns = new MySqlCommand("INSERT INTO timetabledb.lesson_type (lesson_type) VALUES (@lesson_type);", connection);
                 lesson_typeIns.Parameters.AddWithValue("@lesson_type", lesson_type);
@@ -126,7 +135,9 @@ namespace Server
             try
             {
                 connection.Open();
+
                 //заполнение таблицы с преподавателями
+
                 String professors = inData;
                 MySqlCommand professorsIns = new MySqlCommand("INSERT INTO timetabledb.professors (full_name) VALUES (@professors);", connection);
                 professorsIns.Parameters.AddWithValue("@professors", professors);
@@ -147,8 +158,10 @@ namespace Server
             try
             {
                 connection.Open();
+
                 //заполнение таблицы с учебными группами
                 String study_groups =inData;
+
                 MySqlCommand study_groupsIns = new MySqlCommand("INSERT INTO timetabledb.study_groups (name_group) VALUES (@study_groups);", connection);
                 study_groupsIns.Parameters.AddWithValue("@study_groups", study_groups);
                 study_groupsIns.Prepare();
@@ -168,8 +181,10 @@ namespace Server
             try
             {
                 connection.Open();
+
                 //заполнение таблицы с днями недель
                 String week_day =inData;
+
                 MySqlCommand week_dayIns = new MySqlCommand("INSERT INTO timetabledb.week_day (weekday) VALUES (@week_day);", connection);
                 week_dayIns.Parameters.AddWithValue("@week_day", week_day);
                 week_dayIns.Prepare();
@@ -189,8 +204,10 @@ namespace Server
             try
             {
                 connection.Open();
+
                 //заполнение таблицы с очередью недели
                 String week_parity =inData;
+
                 MySqlCommand week_parityIns = new MySqlCommand("INSERT INTO timetabledb.week_parity (week_parity) VALUES (@week_parity);", connection);
                 week_parityIns.Parameters.AddWithValue("@week_parity", week_parity);
                 week_parityIns.Prepare();

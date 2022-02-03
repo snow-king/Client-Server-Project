@@ -13,6 +13,7 @@ namespace Server
 
         public String getLessonsByProffesor(int professorId) {
             //вывести все занятия по id профессора
+
             String res = "";
             try
             {
@@ -49,6 +50,7 @@ namespace Server
         public String getAll()
         {
             //вывести всё что есть в главной таблице
+
             String res = "";
             try
             {
