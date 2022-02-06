@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "63850cd9-8584-4f99-9fe7-4e491efe4e95": {
+      "ProjectGuid": "63850cd9-8584-4f99-9fe7-4e491efe4e95",
+      "DisplayName": "ASP Server",
+      "ColorIndex": 0
+    },
+    "55dc875c-a3e0-4c9a-8d8f-aa52ff8bb1ea": {
+      "ProjectGuid": "55dc875c-a3e0-4c9a-8d8f-aa52ff8bb1ea",
+      "DisplayName": "ASP Server",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,36 @@
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\appsettings.json
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\ASP Server.exe
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\ASP Server.deps.json
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\ASP Server.runtimeconfig.json
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\ASP Server.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\ref\ASP Server.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\ASP Server.pdb
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Humanizer.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.csproj.AssemblyReference.cache
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.AssemblyInfoInputs.cache
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.AssemblyInfo.cs
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.csproj.CoreCompileInputs.cache
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\scopedcss\bundle\ASP Server.styles.css
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.csproj.CopyComplete
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ref\ASP Server.dll
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.pdb
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\obj\Debug\net6.0\ASP Server.genruntimeconfig.cache
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\TestAdd.json
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\ASP Server\bin\Debug\net6.0\TestAdd3.json

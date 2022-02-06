@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Client"
+    "\\ASP Server"
   ],
-  "SelectedNode": "\\Server",
+  "SelectedNode": "\\ASP Server\\ASP Server.csproj",
   "PreviewInSolutionExplorer": false
 }

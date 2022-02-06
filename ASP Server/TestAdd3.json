@@ -1,0 +1,10 @@
+{
+  "lessonTime": { "lessonNumber": 2 },
+  "weekParity": { "parity": "Znam" },
+  "weekDay": { "day": "Vtor" },
+  "classroom": { "location": "D-213" },
+  "studyGroup": { "NameGroup": "PI.1-18-1" },
+  "professor": { "fullName": "Kash" },
+  "discipline": { "nameDiscipline": "OS" },
+  "lessonType": { "type": "Lek" }
+}
