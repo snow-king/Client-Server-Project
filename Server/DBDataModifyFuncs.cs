@@ -15,9 +15,9 @@ namespace Server
             try
             {
                 connection.Open();
-
-                //заполнение главной таблицы
-                MySqlCommand timetableIns = new MySqlCommand("INSERT INTO timetabledb.timetable (idlesson_time, idweek_parity, idweekday, idclassroom, idstudy_groups,idprofessors, idlesson, idlesson_type) " +
+                //main table fill
+                MySqlCommand timetableIns = new MySqlCommand("INSERT INTO timetabledb.timetable " +
+                    "(id_lesson_time, id_week_parity, id_weekday, id_classroom, id_study_groups,id_professors, id_lesson, id_lesson_type) " +
                 "VALUES(@lesstime, @weekchet,@dayweek,@classroom,@group,@professor,@lesson,@lesstype);", connection);
                 timetableIns.Parameters.AddWithValue("@lesstime", lesstimeid);
                 timetableIns.Parameters.AddWithValue("@weekchet", chetid);
@@ -39,17 +39,15 @@ namespace Server
                 connection.Close();
             }
         }
-        public void classroomIns(String inData)
+        public void classroomIns(int classroom, String frame)
         {
             try
             {
                 connection.Open();
-
-                //заполнение таблицы с аудиториями
-
-                String classroom =inData;
-                MySqlCommand classroomIns = new MySqlCommand("INSERT INTO timetabledb.classroom (location) VALUES (@classroom);", connection);
+                //classroom table fill
+                MySqlCommand classroomIns = new MySqlCommand("INSERT INTO timetabledb.classroom (frame,classroom_number) VALUES (@frame,@classroom);", connection);
                 classroomIns.Parameters.AddWithValue("@classroom", classroom);
+                classroomIns.Parameters.AddWithValue("@frame", frame);
                 classroomIns.Prepare();
                 classroomIns.ExecuteNonQuery();
             }
@@ -62,17 +60,14 @@ namespace Server
                 connection.Close();
             }
         }
-        public void disciplineIns(String inData)
+        public void disciplineIns(String discipline_name)
         {
             try
             {
                 connection.Open();
-
-                //заполнение таблицы с предметами
-
-                String discipline =inData;
-                MySqlCommand disciplineIns = new MySqlCommand("INSERT INTO timetabledb.discipline (namediscipline) VALUES (@discipline);", connection);
-                disciplineIns.Parameters.AddWithValue("@discipline", discipline);
+                //discipline table fill
+                MySqlCommand disciplineIns = new MySqlCommand("INSERT INTO timetabledb.discipline (discipline_name) VALUES (@discipline);", connection);
+                disciplineIns.Parameters.AddWithValue("@discipline", discipline_name);
                 disciplineIns.Prepare();
                 disciplineIns.ExecuteNonQuery();
             }
@@ -85,16 +80,36 @@ namespace Server
                 connection.Close();
             }
         }
-        public void lesson_timeIns(int inData)
+        public void facultyIns(String faculty_name)
         {
             try
             {
                 connection.Open();
-
-                //заполнение таблицы с занятиями
-
-                MySqlCommand lesson_timeIns = new MySqlCommand("INSERT INTO timetabledb.lesson_time (lesson_number) VALUES (@lesson_time);", connection);
-                lesson_timeIns.Parameters.AddWithValue("@lesson_time", inData);
+                //faculty table fill
+                MySqlCommand facultyIns = new MySqlCommand("INSERT INTO timetabledb.faculty (faculty_name) VALUES (@faculty);", connection);
+                facultyIns.Parameters.AddWithValue("@faculty", faculty_name);
+                facultyIns.Prepare();
+                facultyIns.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public void lesson_timeIns(int lesson_time, String lesson_start, String lesson_finish)
+        {
+            try
+            {
+                connection.Open();
+                //lesson time table fill
+                MySqlCommand lesson_timeIns = new MySqlCommand("INSERT INTO timetabledb.lesson_time (lesson_number, lesson_start, lesson_finish) VALUES (@lesson_time, @lesson_start, @lesson_finish);", connection);
+                lesson_timeIns.Parameters.AddWithValue("@lesson_time", lesson_time);
+                lesson_timeIns.Parameters.AddWithValue("@lesson_start", lesson_start);
+                lesson_timeIns.Parameters.AddWithValue("@lesson_finish", lesson_finish);
                 lesson_timeIns.Prepare();
                 lesson_timeIns.ExecuteNonQuery();
             }
@@ -112,9 +127,7 @@ namespace Server
             try
             {
                 connection.Open();
-
-                //заполнение таблицы с видами занятий
-
+                //lesson type table fill
                 String lesson_type = inData;
                 MySqlCommand lesson_typeIns = new MySqlCommand("INSERT INTO timetabledb.lesson_type (lesson_type) VALUES (@lesson_type);", connection);
                 lesson_typeIns.Parameters.AddWithValue("@lesson_type", lesson_type);
@@ -130,17 +143,16 @@ namespace Server
                 connection.Close();
             }
         }
-        public void professorsIns(String inData)
+        public void professorsIns(String name,String surname,String patronymic)
         {
             try
             {
                 connection.Open();
-
-                //заполнение таблицы с преподавателями
-
-                String professors = inData;
-                MySqlCommand professorsIns = new MySqlCommand("INSERT INTO timetabledb.professors (full_name) VALUES (@professors);", connection);
-                professorsIns.Parameters.AddWithValue("@professors", professors);
+                //professors table fill
+                MySqlCommand professorsIns = new MySqlCommand("INSERT INTO timetabledb.professors (name,surname,patronymic) VALUES (@name,@surname,@patronymic);", connection);
+                professorsIns.Parameters.AddWithValue("@name", name);
+                professorsIns.Parameters.AddWithValue("@surname", surname);
+                professorsIns.Parameters.AddWithValue("@patronymic", patronymic);
                 professorsIns.Prepare();
                 professorsIns.ExecuteNonQuery();
             }
@@ -153,17 +165,40 @@ namespace Server
                 connection.Close();
             }
         }
-        public void study_groupsIns(String inData)
+        public void specialityIns(String speciality_name, String abbreviated_speciality)
         {
             try
             {
                 connection.Open();
-
-                //заполнение таблицы с учебными группами
-                String study_groups =inData;
-
-                MySqlCommand study_groupsIns = new MySqlCommand("INSERT INTO timetabledb.study_groups (name_group) VALUES (@study_groups);", connection);
-                study_groupsIns.Parameters.AddWithValue("@study_groups", study_groups);
+                //speciality table fill
+                MySqlCommand specialityIns = new MySqlCommand("INSERT INTO timetabledb.speciality (speciality_name,abbreviated_speciality) VALUES (@speciality_name,@abbreviated_speciality);", connection);
+                specialityIns.Parameters.AddWithValue("@speciality_name", speciality_name);
+                specialityIns.Parameters.AddWithValue("@abbreviated_speciality", abbreviated_speciality);
+                specialityIns.Prepare();
+                specialityIns.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public void study_groupsIns(String group_name,int id_faculty,int id_speciality,int course,String education_form)
+        {
+            try
+            {
+                connection.Open();
+                //study group table fill
+                MySqlCommand study_groupsIns = new MySqlCommand("INSERT INTO timetabledb.study_groups (group_name,id_faculty,id_speciality,course,education_form) " +
+                    "VALUES (@group_name,@id_faculty,@id_speciality,@course,@education_form);", connection);
+                study_groupsIns.Parameters.AddWithValue("@group_name", group_name);
+                study_groupsIns.Parameters.AddWithValue("@id_faculty", id_faculty);
+                study_groupsIns.Parameters.AddWithValue("@id_speciality", id_speciality);
+                study_groupsIns.Parameters.AddWithValue("@course", course);
+                study_groupsIns.Parameters.AddWithValue("@education_form", education_form);
                 study_groupsIns.Prepare();
                 study_groupsIns.ExecuteNonQuery();
             }
@@ -181,10 +216,8 @@ namespace Server
             try
             {
                 connection.Open();
-
-                //заполнение таблицы с днями недель
-                String week_day =inData;
-
+                //week day table fill
+                String week_day=inData;
                 MySqlCommand week_dayIns = new MySqlCommand("INSERT INTO timetabledb.week_day (weekday) VALUES (@week_day);", connection);
                 week_dayIns.Parameters.AddWithValue("@week_day", week_day);
                 week_dayIns.Prepare();
@@ -204,10 +237,8 @@ namespace Server
             try
             {
                 connection.Open();
-
-                //заполнение таблицы с очередью недели
-                String week_parity =inData;
-
+                //week parity table fill
+                String week_parity=inData;
                 MySqlCommand week_parityIns = new MySqlCommand("INSERT INTO timetabledb.week_parity (week_parity) VALUES (@week_parity);", connection);
                 week_parityIns.Parameters.AddWithValue("@week_parity", week_parity);
                 week_parityIns.Prepare();
