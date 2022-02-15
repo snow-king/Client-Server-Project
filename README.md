@@ -56,13 +56,8 @@
 <a id ="tok5"> Документация классов/методов </a>
 ---
 
-:white_large_square::white_large_square::white_large_square::sparkle::sparkle::white_large_square::sparkle::sparkle::white_large_square:<br />
-:white_large_square::white_large_square::sparkle::sparkle::sparkle::sparkle::sparkle::sparkle::sparkle:<br />
-:white_large_square::sparkle::sparkle::white_large_square::black_large_square::white_large_square::white_large_square::black_large_square::sparkle:<br />
-:white_large_square::sparkle::sparkle::sparkle::sparkle::sparkle::sparkle::sparkle::white_large_square:<br />
-:sparkle::sparkle::sparkle::sparkle::sos::sos::sos::sos::white_large_square:<br />
-:sparkle::sparkle::sparkle::sparkle::sparkle::sparkle::sparkle::white_large_square::white_large_square:<br />
-:up::up::up::up::up::up::up::white_large_square::white_large_square:<br />
+
+[Wiki](https://github.com/Sekfiser/Client-Server-Project/wiki/Документация-классов-методов)
 
 [:arrow_up:Оглавление](#tok)
 ---
