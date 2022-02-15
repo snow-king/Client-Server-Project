@@ -1,4 +1,5 @@
 # Класс для добавления информации в базу данных
+### :arrow_right_hook: [**Вернуться**](https://github.com/Sekfiser/Client-Server-Project/wiki/Документация-классов-методов)
 ```C#
     public class DBDataModifyFuncs
 ```
