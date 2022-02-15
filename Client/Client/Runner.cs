@@ -11,8 +11,9 @@ namespace Client
         public void Run() 
         {
             Reciver reciver = new Reciver();
+            Sender sender = new Sender();
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Введите цифру: \n0 - Чтобы вывести всё из таблиц.\n1 - Чтобы вывести нужную вам строку.\nЛибо введите любую букву для завершения программы.");
+            Console.WriteLine("Введите цифру: \n0 - Чтобы вывести всё из таблиц.\n1 - Чтобы вывести нужную вам строку.\n2 - Чтобы отправить yaml файл.\nЛибо введите любую букву для завершения программы.");
             Console.ResetColor();
 
             while (Int32.TryParse(Console.ReadLine(),out int input)) 
@@ -37,6 +38,11 @@ namespace Client
                         Console.ResetColor();
                         break;
                     case 2:
+                        Console.WriteLine("Введите путь к файлу:");
+                        Console.WriteLine(sender.UploadYamlFile(Console.ReadLine()));
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine("Вывод закончен!");
+                        Console.ResetColor();
                         break;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
