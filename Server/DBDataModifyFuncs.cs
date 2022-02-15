@@ -17,7 +17,7 @@ namespace Server
                 connection.Open();
                 //main table fill
                 MySqlCommand timetableIns = new MySqlCommand("INSERT INTO timetabledb.timetable " +
-                    "(id_lesson_time, id_week_parity, id_weekday, id_classroom, id_study_groups,id_professors, id_lesson, id_lesson_type) " +
+                    "(id_lesson_time, id_week_parity, id_week_day, id_classroom, id_study_groups,id_professors, id_discipline, id_lesson_type) " +
                 "VALUES(@lesstime, @weekchet,@dayweek,@classroom,@group,@professor,@lesson,@lesstype);", connection);
                 timetableIns.Parameters.AddWithValue("@lesstime", lesstimeid);
                 timetableIns.Parameters.AddWithValue("@weekchet", chetid);

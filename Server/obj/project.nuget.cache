@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EBthxQXcUzBzsgmOuS+Y+j45101+iU6aZiMbcQznPYWCdSyyvWj3KfcOgCY7qwKjsiIAKV7hkMqhBtaL3NuUZg==",
+  "dgSpecHash": "8tsvCWNCBCD+dZXDcQiMxjtUVaDFT2J/7TAdRbCUj+6Rjy13XQzQ29He/esaueEGnsIGWFp+qEQAEWRsPDc+8Q==",
   "success": true,
-  "projectFilePath": "F:\\Programming\\C#\\Timetable TDPS\\Server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\haryu\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\haryu\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
