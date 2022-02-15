@@ -1,4 +1,5 @@
 # Класс для получение информации из базы данных
+### :arrow_right_hook: [**Вернуться**](https://github.com/Sekfiser/Client-Server-Project/wiki/Документация-классов-методов)
 ```C#
 public class DBSelectsFuncs
 ```
