@@ -1,0 +1,365 @@
+classroom:
+  - id_classroom: 1
+    frame: А
+    number_classroom: 401
+  - id_classroom: 2
+    frame: А
+    number_classroom: 509
+  - id_classroom: 3
+    frame: А
+    number_classroom: 513
+  - id_classroom: 4
+    frame: А
+    number_classroom: 516
+  - id_classroom: 5
+    frame: Д
+    number_classroom: 213
+  - id_classroom: 6
+    frame: Д
+    number_classroom: 216
+  - id_classroom: 7
+    frame: Д
+    number_classroom: 501
+  - id_classroom: 8
+    frame: Д
+    number_classroom: 505
+  - id_classroom: 9
+    frame: Д
+    number_classroom: 507
+  - id_classroom: 10
+    frame: Д
+    number_classroom: 508
+  - id_classroom: 11
+    frame: Д
+    number_classroom: 514
+  - id_classroom: 12
+    frame: Д
+    number_classroom: 518
+  - id_classroom: 13
+    frame: Д
+    number_classroom: 521
+  - id_classroom: 14
+    frame: Д
+    number_classroom: 523
+
+discipline:
+- id_discipline: 1
+  name_discipline: Надежность программного обеспечения
+- id_discipline: 2
+  name_discipline: Проектирование человеко-машинного интерфейса
+- id_discipline: 3
+  name_discipline: Сетевые операционные системы
+- id_discipline: 4
+  name_discipline: Командная разработка программных систем
+- id_discipline: 5
+  name_discipline: Управление программными проектами
+- id_discipline: 6
+  name_discipline: Математические модели в расчетах ЭВМ
+
+faculty:
+- id_faculty: 1
+  name_faculty: ФУТиИТ
+
+lesson_time:
+  - id_lesson_time: 1
+    lesson_number: 1
+    lesson_start: 08:30:00
+    lesson_finish: 10:00:00
+  - id_lesson_time: 2
+    lesson_number: 2
+    lesson_start: 10:10:00
+    lesson_finish: 11:40:00
+  - id_lesson_time: 3
+    lesson_number: 3
+    lesson_start: 12:10:00
+    lesson_finish: 13:40:00
+  - id_lesson_time: 4
+    lesson_number: 4
+    lesson_start: 13:50:00
+    lesson_finish: 15:20:00
+  - id_lesson_time: 5
+    lesson_number: 5
+    lesson_start: 15:30:00
+    lesson_finish: 17:00:00
+  - id_lesson_time: 6
+    lesson_number: 6
+    lesson_start: 17:10:00
+    lesson_finish: 18:40:00
+
+lesson_type:
+  - id_lesson_type: 1
+    lesson_type: Лекция
+  - id_lesson_type: 2
+    lesson_type: Лабораторная работа
+
+professors:
+  - id_professors: 1
+    name: Ермаков
+    surname: Анатолий
+    patronymic: Анатольевич
+  - id_professors: 2
+    name: Тирских
+    surname: Владимир
+    patronymic: Викторович
+  - id_professors: 3
+    name: Кашковский
+    surname: Виктор
+    patronymic: Владимирович
+  - id_professors: 4
+    name: Курганская
+    surname: Ольга
+    patronymic: Викторовна
+  - id_professors: 5
+    name: Абасова
+    surname: Наталья
+    patronymic: Иннокентьевна
+  - id_professors: 6
+    name: Белинская
+    surname: Софья
+    patronymic: Иосифовна
+  - id_professors: 7
+    name: Шурховецкий
+    surname: Георгий
+    patronymic: Николаевич
+
+speciality:
+  - id_speciality: 1
+    name_speciality: Программная инженерия
+    abbreviated_speciality: ПИ
+
+study_groups:
+  - id_study_groups: 1
+    name_group: ПИ.1-18-1
+    id_faculty: 1
+    id_speciality: 1
+    course: 4
+    form_education: Очное
+
+week_day:
+  - id_dayweek: 1
+    weekday: Понедельник
+  - id_dayweek: 2
+    weekday: Вторник
+  - id_dayweek: 3
+    weekday: Среда
+  - id_dayweek: 4
+    weekday: Четверг
+  - id_dayweek: 5
+    weekday: Пятница
+  - id_dayweek: 6
+    weekday: Суббота
+
+week_parity:
+  - id_week_parity: 1
+    week_parity: Числитель
+  - id_week_parity: 2
+    week_parity: Знаменатель
+
+timetable:
+  - id_schedule: 1
+    id_lesson_time: 2
+    id_week_parity: 1
+    id_dayweek: 1
+    id_classroom: 14
+    id_study_groups: 1
+    id_professors: 2
+    id_discipline: 2
+    id_lesson_type: 2
+  - id_schedule: 2
+    id_lesson_time: 3
+    id_week_parity: 1
+    id_dayweek: 1
+    id_classroom: 10
+    id_study_groups: 1
+    id_professors: 1
+    id_discipline: 1
+    id_lesson_type: 2
+  - id_schedule: 3
+    id_lesson_time: 3
+    id_week_parity: 1
+    id_dayweek: 2
+    id_classroom: 13
+    id_study_groups: 1
+    id_professors: 6
+    id_discipline: 6
+    id_lesson_type: 2
+  - id_schedule: 4
+    id_lesson_time: 4
+    id_week_parity: 1
+    id_dayweek: 2
+    id_classroom: 13
+    id_study_groups: 1
+    id_professors: 2
+    id_discipline: 2
+    id_lesson_type: 1
+  - id_schedule: 5
+    id_lesson_time: 1
+    id_week_parity: 1
+    id_dayweek: 3
+    id_classroom: 9
+    id_study_groups: 1
+    id_professors: 2
+    id_discipline: 2
+    id_lesson_type: 1
+  - id_schedule: 6
+    id_lesson_time: 2
+    id_week_parity: 1
+    id_dayweek: 3
+    id_classroom: 10
+    id_study_groups: 1
+    id_professors: 1
+    id_discipline: 1
+    id_lesson_type: 2
+  - id_schedule: 7
+    id_lesson_time: 3
+    id_week_parity: 1
+    id_dayweek: 3
+    id_classroom: 7
+    id_study_groups: 1
+    id_professors: 4
+    id_discipline: 4
+    id_lesson_type:  2
+  - id_schedule: 8
+    id_lesson_time: 3
+    id_week_parity: 1
+    id_dayweek: 4
+    id_classroom: 12
+    id_study_groups: 1
+    id_professors: 4
+    id_discipline: 4
+    id_lesson_type: 1
+  - id_schedule: 9
+    id_lesson_time: 4
+    id_week_parity: 1
+    id_dayweek: 4
+    id_classroom: 6
+    id_study_groups: 1
+    id_professors: 5
+    id_discipline: 5
+    id_lesson_type: 1
+  - id_schedule: 10
+    id_lesson_time: 1
+    id_week_parity: 1
+    id_dayweek: 5
+    id_classroom: 12
+    id_study_groups: 1
+    id_professors: 1
+    id_discipline: 1
+    id_lesson_type: 1
+  - id_schedule: 11
+    id_lesson_time: 2
+    id_week_parity: 1
+    id_dayweek: 5
+    id_classroom: 13
+    id_study_groups: 1
+    id_professors: 3
+    id_discipline: 3
+    id_lesson_type: 1
+  - id_schedule: 12
+    id_lesson_time: 4
+    id_week_parity: 1
+    id_dayweek: 6
+    id_classroom: 2
+    id_study_groups: 1
+    id_professors: 7
+    id_discipline: 5
+    id_lesson_type: 2
+  - id_schedule: 13
+    id_lesson_time: 5
+    id_week_parity: 1
+    id_dayweek: 6
+    id_classroom: 2
+    id_study_groups: 1
+    id_professors: 5
+    id_discipline: 3
+    id_lesson_type: 2
+  - id_schedule: 14
+    id_lesson_time: 2
+    id_week_parity: 2
+    id_dayweek: 1
+    id_classroom: 6
+    id_study_groups: 1
+    id_professors: 1
+    id_discipline: 1
+    id_lesson_type: 1
+  - id_schedule: 15
+    id_lesson_time: 3
+    id_week_parity: 2
+    id_dayweek: 1
+    id_classroom: 13
+    id_study_groups: 1
+    id_professors: 2
+    id_discipline: 2
+    id_lesson_type: 1
+  - id_schedule: 16
+    id_lesson_time: 2
+    id_week_parity: 2
+    id_dayweek: 2
+    id_classroom: 5
+    id_study_groups: 1
+    id_professors: 3
+    id_discipline: 3
+    id_lesson_type: 1
+  - id_schedule: 17
+    id_lesson_time: 3
+    id_week_parity: 2
+    id_dayweek: 2
+    id_classroom: 12
+    id_study_groups: 1
+    id_professors: 4
+    id_discipline: 4
+    id_lesson_type: 1
+  - id_schedule: 18
+    id_lesson_time: 5
+    id_week_parity: 2
+    id_dayweek: 3
+    id_classroom: 2
+    id_study_groups: 1
+    id_professors: 4
+    id_discipline: 4
+    id_lesson_type: 2
+  - id_schedule: 19
+    id_lesson_time: 6
+    id_week_parity: 2
+    id_dayweek: 3
+    id_classroom: 2
+    id_study_groups: 1
+    id_professors: 5
+    id_discipline: 5
+    id_lesson_type: 2
+  - id_schedule: 20
+    id_lesson_time: 4
+    id_week_parity: 2
+    id_dayweek: 4
+    id_classroom: 4
+    id_study_groups: 1
+    id_professors: 6
+    id_discipline: 6
+    id_lesson_type: 2
+  - id_schedule: 21
+    id_lesson_time: 5
+    id_week_parity: 2
+    id_dayweek: 4
+    id_classroom: 1
+    id_study_groups: 1
+    id_professors: 7
+    id_discipline: 3
+    id_lesson_type: 2
+  - id_schedule: 22
+    id_lesson_time: 4
+    id_week_parity: 2
+    id_dayweek: 5
+    id_classroom: 11
+    id_study_groups: 1
+    id_professors: 1
+    id_discipline: 1
+    id_lesson_type: 2
+  - id_schedule: 23
+    id_lesson_time: 5
+    id_week_parity: 2
+    id_dayweek: 5
+    id_classroom: 11
+    id_study_groups: 1
+    id_professors: 2
+    id_discipline: 2
+    id_lesson_type: 2
