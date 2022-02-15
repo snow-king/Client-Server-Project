@@ -38,3 +38,4 @@ C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5
 C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\ref\Server.dll
 C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.pdb
 C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\YamlDotNet.dll

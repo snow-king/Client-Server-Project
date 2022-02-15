@@ -1,5 +1,9 @@
 ﻿using MySqlConnector;
 using System;
+using YamlDotNet;
+using Server.Models;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace Server
 {
@@ -38,7 +42,8 @@ namespace Server
         /// <returns>Возвращает строку с полученной информацией</returns>
         public string SelectTimeTable() 
         {
-            string result = "";
+            //string result = "";
+            string stringResult = "";
             string commandStr = "SELECT * FROM timetabledb.timetable;";
             //var idParam = new MySqlParameter("@id", id.ToString());
             MySqlCommand command;
@@ -51,22 +56,36 @@ namespace Server
                 //command.Parameters.Add(idParam);
                 reader = command.ExecuteReader();
 
+                string[] data = new string[9];
+
                 while (reader.Read())
                 {
-                    //for (int i = 0; i < 8; i++)
-                    //    result += reader[i].ToString() + "\n";
-                    result = $"idshedule: {reader[0]}\n" +
-                             $"week_chet_idweek_chet: {reader[1]}\n" +
-                             $"day_week_iddayweek: {reader[2]}\n" +
-                             $"classroom_idclassroom: {reader[3]}\n" +
-                             $"study_groups_iddstudy_groups: {reader[4]}\n" +
-                             $"professors_idprofessors: {reader[5]}\n" +
-                             $"lesson_idlesson: {reader[6]}\n" +
-                             $"lesson_type_idtype_lesson: {reader[7]}\n";
+                    
+                    //result = $"idshedule: {reader[0]}\n" +
+                    //         $"ddd: {reader[1]}\n" +
+                    //         $"week_chet_idweek_chet: {reader[2]}\n" +
+                    //         $"day_week_iddayweek: {reader[3]}\n" +
+                    //         $"classroom_idclassroom: {reader[4]}\n" +
+                    //         $"study_groups_iddstudy_groups: {reader[5]}\n" +
+                    //         $"professors_idprofessors: {reader[6]}\n" +
+                    //         $"lesson_idlesson: {reader[7]}\n" +
+                    //         $"lesson_type_idtype_lesson: {reader[8]}\n";
+
+                    for (int i = 0; i < 9; i++)
+                    {
+                        data[i] = reader[i].ToString();
+                    }
                 }
 
-
-
+                
+                var timetable = new Timetable(data);
+                var serializer = new SerializerBuilder()
+                    .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                    .Build();
+                
+                stringResult = serializer.Serialize(timetable);
+                Console.WriteLine(stringResult);
+                
                 reader.Close();
             }
             catch (Exception e)
@@ -78,7 +97,7 @@ namespace Server
                 Connection.Close();
             }
 
-            return result;
+            return stringResult;
         }
     }
 }
