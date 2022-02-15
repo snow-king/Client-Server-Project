@@ -1,5 +1,6 @@
 
 ## _Класс для создания подключения и исполнения запросов_
+### :arrow_right_hook: [**Вернуться**](https://github.com/Sekfiser/Client-Server-Project/wiki/Документация-классов-методов)
 ```C#
 public class SQLConnector
 ```
