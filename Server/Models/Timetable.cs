@@ -1,28 +1,30 @@
 ﻿namespace Server.Models
 {
-    class Timetable
+    public class Timetable
     {
-        public int id_schedule { get; set; }
-        public int id_lesson_time { get; set; }
-        public int id_week_parity { get; set; }
-        public int id_week_day { get; set; }
-        public int id_classroom { get; set; }
-        public int id_study_groups { get; set; }
-        public int id_professors { get; set; }
-        public int id_discipline { get; set; }
-        public int id_lesson_type { get; set; }
+        public int Id_schedule { get; set; }
+        public int Id_lesson_time { get; set; }
+        public int Id_week_parity { get; set; }
+        public int Id_week_day { get; set; }
+        public int Id_classroom { get; set; }
+        public int Id_study_groups { get; set; }
+        public int Id_professors { get; set; }
+        public int Id_discipline { get; set; }
+        public int Id_lesson_type { get; set; }
 
-        public Timetable(string[] data)
+
+
+        /*public Timetable(string[] data)
         {
-            id_schedule = System.Convert.ToInt32(data[0]);
-            id_lesson_time = System.Convert.ToInt32(data[1]);
-            id_week_parity = System.Convert.ToInt32(data[2]);
-            id_week_day = System.Convert.ToInt32(data[3]);
-            id_classroom = System.Convert.ToInt32(data[4]);
-            id_study_groups = System.Convert.ToInt32(data[5]);
-            id_professors = System.Convert.ToInt32(data[6]);
-            id_discipline = System.Convert.ToInt32(data[7]);
-            id_lesson_type = System.Convert.ToInt32(data[8]);
-        }
+            Id_schedule = System.Convert.ToInt32(data[0]);
+            Id_lesson_time = System.Convert.ToInt32(data[1]);
+            Id_week_parity = System.Convert.ToInt32(data[2]);
+            Id_week_day = System.Convert.ToInt32(data[3]);
+            Id_classroom = System.Convert.ToInt32(data[4]);
+            Id_study_groups = System.Convert.ToInt32(data[5]);
+            Id_professors = System.Convert.ToInt32(data[6]);
+            Id_discipline = System.Convert.ToInt32(data[7]);
+            Id_lesson_type = System.Convert.ToInt32(data[8]);
+        }*/
     }
 }

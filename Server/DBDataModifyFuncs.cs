@@ -1,5 +1,6 @@
 ﻿using System;
 using MySqlConnector;
+using Server.Models;
 
 namespace Server
 {
@@ -10,6 +11,18 @@ namespace Server
         {
             connection = gettedConnection;
         }
+
+        /// <summary>
+        /// Используется для занесения данных в таблицу Timetable
+        /// </summary>
+        /// <param name="lesstimeid"></param>
+        /// <param name="chetid"></param>
+        /// <param name="dayid"></param>
+        /// <param name="roomid"></param>
+        /// <param name="groupid"></param>
+        /// <param name="proffesorid"></param>
+        /// <param name="lessonid"></param>
+        /// <param name="lesstypeid"></param>
         public void timetableIns(int lesstimeid, int chetid,int dayid, int roomid,int groupid, int proffesorid, int lessonid,int lesstypeid)
         {
             try
@@ -39,6 +52,39 @@ namespace Server
                 connection.Close();
             }
         }
+
+
+        /// <param name="data">Модель данных десериализованной из YAML-строки</param>
+        public void timetableIns(Timetable data)
+        {
+            try
+            {
+                connection.Open();
+                //main table fill
+                MySqlCommand timetableIns = new MySqlCommand("INSERT INTO timetabledb.timetable " +
+                    "(id_lesson_time, id_week_parity, id_week_day, id_classroom, id_study_groups,id_professors, id_discipline, id_lesson_type) " +
+                "VALUES(@lesstime, @weekchet,@dayweek,@classroom,@group,@professor,@lesson,@lesstype);", connection);
+                timetableIns.Parameters.AddWithValue("@lesstime", data.Id_lesson_time);
+                timetableIns.Parameters.AddWithValue("@weekchet", data.Id_week_parity);
+                timetableIns.Parameters.AddWithValue("@dayweek", data.Id_week_day);
+                timetableIns.Parameters.AddWithValue("@classroom", data.Id_classroom);
+                timetableIns.Parameters.AddWithValue("@group", data.Id_study_groups);
+                timetableIns.Parameters.AddWithValue("@professor", data.Id_professors);
+                timetableIns.Parameters.AddWithValue("@lesson", data.Id_discipline);
+                timetableIns.Parameters.AddWithValue("@lesstype", data.Id_lesson_type);
+                timetableIns.Prepare();
+                timetableIns.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public void classroomIns(int classroom, String frame)
         {
             try

@@ -5309,11 +5309,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\ServerUnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\ServerUnitTests.csproj",
       "projectName": "ServerUnitTests",
-      "projectPath": "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\ServerUnitTests.csproj",
+      "projectPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\ServerUnitTests.csproj",
       "packagesPath": "C:\\Users\\haryu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\obj\\",
+      "outputPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\haryu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5330,8 +5330,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj": {
-              "projectPath": "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj"
+            "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj": {
+              "projectPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj"
             }
           }
         }

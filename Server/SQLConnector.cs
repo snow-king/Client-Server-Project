@@ -4,6 +4,7 @@ using YamlDotNet;
 using Server.Models;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
+using System.Collections.Generic;
 
 namespace Server
 {
@@ -48,6 +49,7 @@ namespace Server
             //var idParam = new MySqlParameter("@id", id.ToString());
             MySqlCommand command;
             MySqlDataReader reader;
+            List<Timetable> timetables = new List<Timetable>();
 
             try
             {
@@ -57,33 +59,35 @@ namespace Server
                 reader = command.ExecuteReader();
 
                 string[] data = new string[9];
-
+                
                 while (reader.Read())
                 {
-                    
-                    //result = $"idshedule: {reader[0]}\n" +
-                    //         $"ddd: {reader[1]}\n" +
-                    //         $"week_chet_idweek_chet: {reader[2]}\n" +
-                    //         $"day_week_iddayweek: {reader[3]}\n" +
-                    //         $"classroom_idclassroom: {reader[4]}\n" +
-                    //         $"study_groups_iddstudy_groups: {reader[5]}\n" +
-                    //         $"professors_idprofessors: {reader[6]}\n" +
-                    //         $"lesson_idlesson: {reader[7]}\n" +
-                    //         $"lesson_type_idtype_lesson: {reader[8]}\n";
+                    var timetable = new Timetable();
+                    timetable.Id_schedule = Convert.ToInt32(reader[0]);
+                    timetable.Id_lesson_time = Convert.ToInt32(reader[1]);
+                    timetable.Id_week_parity = Convert.ToInt32(reader[2]);
+                    timetable.Id_week_day = Convert.ToInt32(reader[3]);
+                    timetable.Id_classroom = Convert.ToInt32(reader[4]);
+                    timetable.Id_study_groups = Convert.ToInt32(reader[5]);
+                    timetable.Id_professors = Convert.ToInt32(reader[6]);
+                    timetable.Id_discipline = Convert.ToInt32(reader[7]);
+                    timetable.Id_lesson_type = Convert.ToInt32(reader[8]);
 
-                    for (int i = 0; i < 9; i++)
+                    /*for (int i = 0; i < 9; i++)
                     {
                         data[i] = reader[i].ToString();
-                    }
+                    }*/
+
+                    timetables.Add(timetable);
                 }
 
                 
-                var timetable = new Timetable(data);
+                
                 var serializer = new SerializerBuilder()
                     .WithNamingConvention(CamelCaseNamingConvention.Instance)
                     .Build();
                 
-                stringResult = serializer.Serialize(timetable);
+                stringResult = serializer.Serialize(timetables);
                 Console.WriteLine(stringResult);
                 
                 reader.Close();

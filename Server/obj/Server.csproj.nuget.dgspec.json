@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj": {}
+    "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj": {
+    "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj",
+        "projectPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj",
         "packagesPath": "C:\\Users\\haryu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haryu\\source\\repos\\Sekfiser\\Client-Server-Project\\Server\\obj\\",
+        "outputPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\haryu\\AppData\\Roaming\\NuGet\\NuGet.Config",
