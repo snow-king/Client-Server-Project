@@ -10,15 +10,13 @@ namespace Server
         {
             connection = gettedConnection;
         }
-
-        public String getLessonsByProffesor(int professorId) {
-            //вывести все занятия по id профессора
-
+        public String getLessonsByProffesor(int proffesorId) {
+            //print all lessons for selected proffesssor
             String res = "";
             try
             {
                 connection.Open();
-                MySqlCommand profSel = new MySqlCommand("SELECT * FROM timetabledb.timetable WHERE idprofessors=@professorId;", connection);
+                MySqlCommand profSel = new MySqlCommand("SELECT * FROM timetabledb.timetable WHERE id_professors=@professorId;", connection);
                 profSel.Parameters.AddWithValue("@professorId", proffesorId);
                 profSel.Prepare();
                 MySqlDataReader reader = profSel.ExecuteReader();
@@ -26,14 +24,14 @@ namespace Server
                 while (reader.Read())
                 {
                     res +=$" idshedule: {reader[0]}\n" +
-                             $" idlesson_time: {reader[1]}\n" +
-                             $" idweek_parity: {reader[2]}\n" +
-                             $" idweekday: {reader[3]}\n" +
-                             $" idclassroom: {reader[4]}\n" +
-                             $" idstudy_groups: {reader[5]}\n" +
-                             $" idprofessors: {reader[6]}\n" +
-                             $" idlesson: {reader[7]}\n" +
-                             $" idlesson_type: {reader[8]}"+"\n\n";
+                             $" id_lesson_time: {reader[1]}\n" +
+                             $" id_week_parity: {reader[2]}\n" +
+                             $" id_weekday: {reader[3]}\n" +
+                             $" id_classroom: {reader[4]}\n" +
+                             $" id_study_groups: {reader[5]}\n" +
+                             $" id_professors: {reader[6]}\n" +
+                             $" id_lesson: {reader[7]}\n" +
+                             $" id_lesson_type: {reader[8]}"+"\n\n";
                 }
             }
             catch (Exception e)
@@ -46,11 +44,9 @@ namespace Server
             }
             return res;
         }
-
         public String getAll()
         {
-            //вывести всё что есть в главной таблице
-
+            //print all from timetable
             String res = "";
             try
             {
@@ -60,14 +56,14 @@ namespace Server
                 while (reader.Read())
                 {
                     res += $" idshedule: {reader[0]}\n" +
-                             $" idlesson_time: {reader[1]}\n" +
-                             $" idweek_parity: {reader[2]}\n" +
-                             $" idweekday: {reader[3]}\n" +
-                             $" idclassroom: {reader[4]}\n" +
-                             $" idstudy_groups: {reader[5]}\n" +
-                             $" idprofessors: {reader[6]}\n" +
-                             $" idlesson: {reader[7]}\n" +
-                             $" idlesson_type: {reader[8]}" + "\n\n";
+                             $" id_lesson_time: {reader[1]}\n" +
+                             $" id_week_parity: {reader[2]}\n" +
+                             $" id_weekday: {reader[3]}\n" +
+                             $" id_classroom: {reader[4]}\n" +
+                             $" id_study_groups: {reader[5]}\n" +
+                             $" id_professors: {reader[6]}\n" +
+                             $" id_lesson: {reader[7]}\n" +
+                             $" id_lesson_type: {reader[8]}" + "\n\n";
                 }
             }
             catch (Exception e)

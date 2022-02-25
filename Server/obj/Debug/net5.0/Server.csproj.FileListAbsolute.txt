@@ -18,3 +18,24 @@ F:\Programming\C#\Timetable TDPS\Server\obj\Debug\net5.0\Server.dll
 F:\Programming\C#\Timetable TDPS\Server\obj\Debug\net5.0\ref\Server.dll
 F:\Programming\C#\Timetable TDPS\Server\obj\Debug\net5.0\Server.pdb
 F:\Programming\C#\Timetable TDPS\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\Server.exe
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\Server.deps.json
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\Server.runtimeconfig.json
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\Server.runtimeconfig.dev.json
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\Server.dll
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\ref\Server.dll
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\Server.pdb
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.csproj.AssemblyReference.cache
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.AssemblyInfoInputs.cache
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.AssemblyInfo.cs
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.csproj.CoreCompileInputs.cache
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.csproj.CopyComplete
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.dll
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\ref\Server.dll
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.pdb
+C:\Users\haryu\Source\Repos\Sekfiser\Client-Server-Project\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache
+C:\Users\haryu\source\repos\Sekfiser\Client-Server-Project\Server\bin\Debug\net5.0\YamlDotNet.dll

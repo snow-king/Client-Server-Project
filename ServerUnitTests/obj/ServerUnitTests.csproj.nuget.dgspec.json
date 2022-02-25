@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Programming\\C#\\Timetable TDPS\\ServerUnitTests\\ServerUnitTests.csproj": {}
+    "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\ServerUnitTests.csproj": {}
   },
   "projects": {
-    "F:\\Programming\\C#\\Timetable TDPS\\ServerUnitTests\\ServerUnitTests.csproj": {
+    "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\ServerUnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programming\\C#\\Timetable TDPS\\ServerUnitTests\\ServerUnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\ServerUnitTests.csproj",
         "projectName": "ServerUnitTests",
-        "projectPath": "F:\\Programming\\C#\\Timetable TDPS\\ServerUnitTests\\ServerUnitTests.csproj",
+        "projectPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\ServerUnitTests.csproj",
         "packagesPath": "C:\\Users\\haryu\\.nuget\\packages\\",
-        "outputPath": "F:\\Programming\\C#\\Timetable TDPS\\ServerUnitTests\\obj\\",
+        "outputPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\ServerUnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\haryu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\Programming\\C#\\Timetable TDPS\\Server\\Server.csproj": {
-                "projectPath": "F:\\Programming\\C#\\Timetable TDPS\\Server\\Server.csproj"
+              "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj": {
+                "projectPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj"
               }
             }
           }
@@ -76,18 +76,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Programming\\C#\\Timetable TDPS\\Server\\Server.csproj": {
+    "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programming\\C#\\Timetable TDPS\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "F:\\Programming\\C#\\Timetable TDPS\\Server\\Server.csproj",
+        "projectPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj",
         "packagesPath": "C:\\Users\\haryu\\.nuget\\packages\\",
-        "outputPath": "F:\\Programming\\C#\\Timetable TDPS\\Server\\obj\\",
+        "outputPath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\haryu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -123,6 +123,10 @@
             "MySqlConnector": {
               "target": "Package",
               "version": "[2.1.2, )"
+            },
+            "YamlDotNet": {
+              "target": "Package",
+              "version": "[11.2.1, )"
             }
           },
           "imports": [
@@ -140,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

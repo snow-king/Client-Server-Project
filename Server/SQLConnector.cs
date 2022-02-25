@@ -1,5 +1,10 @@
 ﻿using MySqlConnector;
 using System;
+using YamlDotNet;
+using Server.Models;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
+using System.Collections.Generic;
 
 namespace Server
 {
@@ -38,11 +43,13 @@ namespace Server
         /// <returns>Возвращает строку с полученной информацией</returns>
         public string SelectTimeTable() 
         {
-            string result = "";
+            //string result = "";
+            string stringResult = "";
             string commandStr = "SELECT * FROM timetabledb.timetable;";
             //var idParam = new MySqlParameter("@id", id.ToString());
             MySqlCommand command;
             MySqlDataReader reader;
+            List<Timetable> timetables = new List<Timetable>();
 
             try
             {
@@ -51,22 +58,38 @@ namespace Server
                 //command.Parameters.Add(idParam);
                 reader = command.ExecuteReader();
 
+                string[] data = new string[9];
+                
                 while (reader.Read())
                 {
-                    //for (int i = 0; i < 8; i++)
-                    //    result += reader[i].ToString() + "\n";
-                    result = $"idshedule: {reader[0]}\n" +
-                             $"week_chet_idweek_chet: {reader[1]}\n" +
-                             $"day_week_iddayweek: {reader[2]}\n" +
-                             $"classroom_idclassroom: {reader[3]}\n" +
-                             $"study_groups_iddstudy_groups: {reader[4]}\n" +
-                             $"professors_idprofessors: {reader[5]}\n" +
-                             $"lesson_idlesson: {reader[6]}\n" +
-                             $"lesson_type_idtype_lesson: {reader[7]}\n";
+                    var timetable = new Timetable();
+                    timetable.Id_schedule = Convert.ToInt32(reader[0]);
+                    timetable.Id_lesson_time = Convert.ToInt32(reader[1]);
+                    timetable.Id_week_parity = Convert.ToInt32(reader[2]);
+                    timetable.Id_week_day = Convert.ToInt32(reader[3]);
+                    timetable.Id_classroom = Convert.ToInt32(reader[4]);
+                    timetable.Id_study_groups = Convert.ToInt32(reader[5]);
+                    timetable.Id_professors = Convert.ToInt32(reader[6]);
+                    timetable.Id_discipline = Convert.ToInt32(reader[7]);
+                    timetable.Id_lesson_type = Convert.ToInt32(reader[8]);
+
+                    /*for (int i = 0; i < 9; i++)
+                    {
+                        data[i] = reader[i].ToString();
+                    }*/
+
+                    timetables.Add(timetable);
                 }
 
-
-
+                
+                
+                var serializer = new SerializerBuilder()
+                    .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                    .Build();
+                
+                stringResult = serializer.Serialize(timetables);
+                Console.WriteLine(stringResult);
+                
                 reader.Close();
             }
             catch (Exception e)
@@ -78,7 +101,7 @@ namespace Server
                 Connection.Close();
             }
 
-            return result;
+            return stringResult;
         }
     }
 }

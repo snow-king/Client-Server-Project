@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EBthxQXcUzBzsgmOuS+Y+j45101+iU6aZiMbcQznPYWCdSyyvWj3KfcOgCY7qwKjsiIAKV7hkMqhBtaL3NuUZg==",
+  "dgSpecHash": "uoa0nPdwHCp1JmzewFGYzMLXiLaI+2gdhGCyLAr8uLsmymLtQgI+gcvdb6NJGgCHR9WtvdX+nDu0ZSrHO3ub8A==",
   "success": true,
-  "projectFilePath": "F:\\Programming\\C#\\Timetable TDPS\\Server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\haryu\\Source\\Repos\\Sekfiser\\Client-Server-Project\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\haryu\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\haryu\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
@@ -80,7 +80,8 @@
     "C:\\Users\\haryu\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\haryu\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\haryu\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\haryu\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\haryu\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\haryu\\.nuget\\packages\\yamldotnet\\11.2.1\\yamldotnet.11.2.1.nupkg.sha512"
   ],
   "logs": []
 }
