@@ -16,28 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `lesson_type`
+-- Table structure for table `classroom`
 --
 
-DROP TABLE IF EXISTS `lesson_type`;
+DROP TABLE IF EXISTS `classroom`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `lesson_type` (
-  `idtype_lesson` int NOT NULL AUTO_INCREMENT,
-  `lesson_type` varchar(45) NOT NULL,
-  PRIMARY KEY (`idtype_lesson`),
-  UNIQUE KEY `idtype_lesson_UNIQUE` (`idtype_lesson`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `classroom` (
+  `id_classroom` int NOT NULL AUTO_INCREMENT,
+  `frame` varchar(100) NOT NULL,
+  `number_classroom` int DEFAULT NULL,
+  PRIMARY KEY (`id_classroom`),
+  UNIQUE KEY `idclassroom_UNIQUE` (`id_classroom`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `lesson_type`
+-- Dumping data for table `classroom`
 --
 
-LOCK TABLES `lesson_type` WRITE;
-/*!40000 ALTER TABLE `lesson_type` DISABLE KEYS */;
-INSERT INTO `lesson_type` VALUES (1,'Лекция'),(2,'Лабораторная работа');
-/*!40000 ALTER TABLE `lesson_type` ENABLE KEYS */;
+LOCK TABLES `classroom` WRITE;
+/*!40000 ALTER TABLE `classroom` DISABLE KEYS */;
+INSERT INTO `classroom` VALUES (1,'А',401),(2,'А',509),(3,'А',513),(4,'А',516),(5,'Д',213),(6,'Д',216),(7,'Д',501),(8,'Д',505),(9,'Д',507),(10,'Д',508),(11,'Д',514),(12,'Д',518),(13,'Д',521),(14,'Д',523),(15,'Teams',NULL),(16,'Е',101),(17,'Е',102),(18,'Е',103),(19,'Е',202),(20,'Б',104),(21,'Д',320),(22,'А',405),(23,'Б',116),(24,'Б',102),(25,'А',10),(26,'Б',312),(27,'А',13),(28,'Д',614);
+/*!40000 ALTER TABLE `classroom` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30 17:19:33
+-- Dump completed on 2022-02-26  1:45:23

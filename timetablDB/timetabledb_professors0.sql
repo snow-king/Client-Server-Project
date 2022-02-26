@@ -23,11 +23,13 @@ DROP TABLE IF EXISTS `professors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `professors` (
-  `idprofessors` int NOT NULL AUTO_INCREMENT,
-  `full_name` varchar(100) NOT NULL,
-  PRIMARY KEY (`idprofessors`),
-  UNIQUE KEY `idprofessors_UNIQUE` (`idprofessors`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
+  `id_professors` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `surname` varchar(45) DEFAULT NULL,
+  `patronymic` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_professors`),
+  UNIQUE KEY `idprofessors_UNIQUE` (`id_professors`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +38,7 @@ CREATE TABLE `professors` (
 
 LOCK TABLES `professors` WRITE;
 /*!40000 ALTER TABLE `professors` DISABLE KEYS */;
-INSERT INTO `professors` VALUES (1,'Ермаков А.А'),(2,'Тирских В.В.'),(3,'Кашковский В.В.'),(4,'Курганская О.В.'),(5,'Абасова Н.И.'),(6,'Шурховецкий Г.Н.'),(7,'Белинская С.И.');
+INSERT INTO `professors` VALUES (1,'Ермаков','Анатолий','Анатольевич'),(2,'Тирских','Владимир','Викторович'),(3,'Кашковский','Виктор','Владимирович'),(4,'Курганская','Ольга','Викторовна'),(5,'Абасова','Наталья','Иннокентьевна'),(6,'Белинская','Софья','Иосифовна'),(7,'Шурховецкий','Георгий','Николаевич'),(8,'Ковригина','Г.','Д.'),(9,'Линьков','А.','О.'),(10,'Воронова','Ю.','В.'),(11,'Рычков','Н.','П.'),(12,'Санникова','Е.','Г.'),(13,'Макаров','В.','В.'),(14,'Романовский','А.','И.'),(15,'Морозов','Д.','В.'),(16,'Иванов','П.','Ю.'),(17,'Тюньков','В.','В.'),(18,'Карпов','И.','Г.'),(19,'Грозина','Е.','В.'),(20,'Гнездилова','О.','А.'),(21,'Холодов','П.','Н.'),(22,'Колисниченко','Е.','А.'),(23,'Титов','К.','М.'),(24,'Фетисов','И.','А.'),(25,'Зайнагабдинов','Д.','А.');
 /*!40000 ALTER TABLE `professors` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30 17:19:33
+-- Dump completed on 2022-02-26  1:45:22

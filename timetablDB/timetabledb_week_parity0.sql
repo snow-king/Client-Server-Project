@@ -16,28 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `classroom`
+-- Table structure for table `week_parity`
 --
 
-DROP TABLE IF EXISTS `classroom`;
+DROP TABLE IF EXISTS `week_parity`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `classroom` (
-  `idclassroom` int NOT NULL AUTO_INCREMENT,
-  `location` varchar(100) NOT NULL,
-  PRIMARY KEY (`idclassroom`),
-  UNIQUE KEY `idclassroom_UNIQUE` (`idclassroom`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `week_parity` (
+  `id_week_parity` int NOT NULL AUTO_INCREMENT,
+  `week_parity` varchar(15) NOT NULL,
+  PRIMARY KEY (`id_week_parity`),
+  UNIQUE KEY `idweek_chet_UNIQUE` (`id_week_parity`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `classroom`
+-- Dumping data for table `week_parity`
 --
 
-LOCK TABLES `classroom` WRITE;
-/*!40000 ALTER TABLE `classroom` DISABLE KEYS */;
-INSERT INTO `classroom` VALUES (1,'Д-216'),(2,'Д-512'),(3,'Д-213'),(4,'Д-518'),(5,'Д-505'),(6,'Д-509'),(7,'А-509'),(8,'А-516'),(9,'А-401'),(10,'Д-508'),(11,'Д-523'),(12,'Д-514');
-/*!40000 ALTER TABLE `classroom` ENABLE KEYS */;
+LOCK TABLES `week_parity` WRITE;
+/*!40000 ALTER TABLE `week_parity` DISABLE KEYS */;
+INSERT INTO `week_parity` VALUES (1,'Числитель'),(2,'Знаменатель');
+/*!40000 ALTER TABLE `week_parity` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30 17:19:33
+-- Dump completed on 2022-02-26  1:45:24

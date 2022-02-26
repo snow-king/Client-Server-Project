@@ -16,28 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `discipline`
+-- Table structure for table `lesson_type`
 --
 
-DROP TABLE IF EXISTS `discipline`;
+DROP TABLE IF EXISTS `lesson_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `discipline` (
-  `iddiscipline` int NOT NULL AUTO_INCREMENT,
-  `namediscipline` varchar(100) NOT NULL,
-  PRIMARY KEY (`iddiscipline`),
-  UNIQUE KEY `idlesson_UNIQUE` (`iddiscipline`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `lesson_type` (
+  `id_type_lesson` int NOT NULL AUTO_INCREMENT,
+  `lesson_type` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_type_lesson`),
+  UNIQUE KEY `idtype_lesson_UNIQUE` (`id_type_lesson`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `discipline`
+-- Dumping data for table `lesson_type`
 --
 
-LOCK TABLES `discipline` WRITE;
-/*!40000 ALTER TABLE `discipline` DISABLE KEYS */;
-INSERT INTO `discipline` VALUES (1,'Надежность программного обеспечения'),(2,'Проектирование человеко-машинного интерфейса'),(3,'Сетевые операционные системы'),(4,'Командная разработка программных систем'),(5,'Управление программными проектами'),(6,'Математические модели в расчетах на ЭВМ');
-/*!40000 ALTER TABLE `discipline` ENABLE KEYS */;
+LOCK TABLES `lesson_type` WRITE;
+/*!40000 ALTER TABLE `lesson_type` DISABLE KEYS */;
+INSERT INTO `lesson_type` VALUES (1,'Лекция'),(2,'Лабораторная работа'),(3,'Практическое занятие');
+/*!40000 ALTER TABLE `lesson_type` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30 17:19:34
+-- Dump completed on 2022-02-26  1:45:22

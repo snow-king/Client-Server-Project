@@ -16,28 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `week_day`
+-- Table structure for table `faculty`
 --
 
-DROP TABLE IF EXISTS `week_day`;
+DROP TABLE IF EXISTS `faculty`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `week_day` (
-  `iddayweek` int NOT NULL AUTO_INCREMENT,
-  `weekday` varchar(15) NOT NULL,
-  PRIMARY KEY (`iddayweek`),
-  UNIQUE KEY `iddayweek_UNIQUE` (`iddayweek`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `faculty` (
+  `id_faculty` int NOT NULL,
+  `name_faculty` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_faculty`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `week_day`
+-- Dumping data for table `faculty`
 --
 
-LOCK TABLES `week_day` WRITE;
-/*!40000 ALTER TABLE `week_day` DISABLE KEYS */;
-INSERT INTO `week_day` VALUES (1,'Понедельник'),(2,'Вторник'),(3,'Среда'),(4,'Четверг'),(5,'Пятница'),(6,'Суббота');
-/*!40000 ALTER TABLE `week_day` ENABLE KEYS */;
+LOCK TABLES `faculty` WRITE;
+/*!40000 ALTER TABLE `faculty` DISABLE KEYS */;
+INSERT INTO `faculty` VALUES (1,'ФУТиИТ'),(2,'ФТС'),(3,'ФСЖД');
+/*!40000 ALTER TABLE `faculty` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30 17:19:33
+-- Dump completed on 2022-02-26  1:45:23

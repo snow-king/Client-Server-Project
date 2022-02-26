@@ -16,28 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `lesson_time`
+-- Table structure for table `week_day`
 --
 
-DROP TABLE IF EXISTS `lesson_time`;
+DROP TABLE IF EXISTS `week_day`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `lesson_time` (
-  `idlesson_time` int NOT NULL AUTO_INCREMENT,
-  `lesson_number` int NOT NULL,
-  PRIMARY KEY (`idlesson_time`),
-  UNIQUE KEY `idlesson_time_UNIQUE` (`idlesson_time`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `week_day` (
+  `id_dayweek` int NOT NULL AUTO_INCREMENT,
+  `weekday` varchar(15) NOT NULL,
+  PRIMARY KEY (`id_dayweek`),
+  UNIQUE KEY `iddayweek_UNIQUE` (`id_dayweek`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `lesson_time`
+-- Dumping data for table `week_day`
 --
 
-LOCK TABLES `lesson_time` WRITE;
-/*!40000 ALTER TABLE `lesson_time` DISABLE KEYS */;
-INSERT INTO `lesson_time` VALUES (1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9);
-/*!40000 ALTER TABLE `lesson_time` ENABLE KEYS */;
+LOCK TABLES `week_day` WRITE;
+/*!40000 ALTER TABLE `week_day` DISABLE KEYS */;
+INSERT INTO `week_day` VALUES (1,'Понедельник'),(2,'Вторник'),(3,'Среда'),(4,'Четверг'),(5,'Пятница'),(6,'Суббота');
+/*!40000 ALTER TABLE `week_day` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30 17:19:34
+-- Dump completed on 2022-02-26  1:45:22

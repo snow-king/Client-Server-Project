@@ -16,28 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `week_parity`
+-- Table structure for table `speciality`
 --
 
-DROP TABLE IF EXISTS `week_parity`;
+DROP TABLE IF EXISTS `speciality`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `week_parity` (
-  `idweek_parity` int NOT NULL AUTO_INCREMENT,
-  `week_parity` varchar(15) NOT NULL,
-  PRIMARY KEY (`idweek_parity`),
-  UNIQUE KEY `idweek_chet_UNIQUE` (`idweek_parity`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `speciality` (
+  `id_speciality` int NOT NULL,
+  `name_speciality` varchar(45) DEFAULT NULL,
+  `abbreviated_speciality` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_speciality`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `week_parity`
+-- Dumping data for table `speciality`
 --
 
-LOCK TABLES `week_parity` WRITE;
-/*!40000 ALTER TABLE `week_parity` DISABLE KEYS */;
-INSERT INTO `week_parity` VALUES (1,'Числитель'),(2,'Знаменатель');
-/*!40000 ALTER TABLE `week_parity` ENABLE KEYS */;
+LOCK TABLES `speciality` WRITE;
+/*!40000 ALTER TABLE `speciality` DISABLE KEYS */;
+INSERT INTO `speciality` VALUES (1,'Программная инженерия','ПИ'),(2,'Подвижной состав железных дорог','ПСЖ'),(3,'Строительство железных дорог','СЖД');
+/*!40000 ALTER TABLE `speciality` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30 17:19:33
+-- Dump completed on 2022-02-26  1:45:23
