@@ -62,7 +62,7 @@ namespace Server
                 connection.Open();
                 //main table fill
                 MySqlCommand timetableIns = new MySqlCommand("INSERT INTO timetabledb.timetable " +
-                    "(id_lesson_time, id_week_parity, id_week_day, id_classroom, id_study_groups,id_professors, id_discipline, id_lesson_type) " +
+                    "(id_lesson_time, id_week_parity, id_weekday, id_classroom, id_study_groups,id_professors, id_lesson, id_lesson_type) " +
                 "VALUES(@lesstime, @weekchet,@dayweek,@classroom,@group,@professor,@lesson,@lesstype);", connection);
                 timetableIns.Parameters.AddWithValue("@lesstime", data.Id_lesson_time);
                 timetableIns.Parameters.AddWithValue("@weekchet", data.Id_week_parity);
@@ -91,7 +91,7 @@ namespace Server
             {
                 connection.Open();
                 //classroom table fill
-                MySqlCommand classroomIns = new MySqlCommand("INSERT INTO timetabledb.classroom (frame,classroom_number) VALUES (@frame,@classroom);", connection);
+                MySqlCommand classroomIns = new MySqlCommand("INSERT INTO timetabledb.classroom (frame,number_classroom) VALUES (@frame,@classroom);", connection);
                 classroomIns.Parameters.AddWithValue("@classroom", classroom);
                 classroomIns.Parameters.AddWithValue("@frame", frame);
                 classroomIns.Prepare();
@@ -112,7 +112,7 @@ namespace Server
             {
                 connection.Open();
                 //discipline table fill
-                MySqlCommand disciplineIns = new MySqlCommand("INSERT INTO timetabledb.discipline (discipline_name) VALUES (@discipline);", connection);
+                MySqlCommand disciplineIns = new MySqlCommand("INSERT INTO timetabledb.discipline (name_discipline) VALUES (@discipline);", connection);
                 disciplineIns.Parameters.AddWithValue("@discipline", discipline_name);
                 disciplineIns.Prepare();
                 disciplineIns.ExecuteNonQuery();
@@ -132,7 +132,7 @@ namespace Server
             {
                 connection.Open();
                 //faculty table fill
-                MySqlCommand facultyIns = new MySqlCommand("INSERT INTO timetabledb.faculty (faculty_name) VALUES (@faculty);", connection);
+                MySqlCommand facultyIns = new MySqlCommand("INSERT INTO timetabledb.faculty (name_faculty) VALUES (@faculty);", connection);
                 facultyIns.Parameters.AddWithValue("@faculty", faculty_name);
                 facultyIns.Prepare();
                 facultyIns.ExecuteNonQuery();
@@ -217,7 +217,7 @@ namespace Server
             {
                 connection.Open();
                 //speciality table fill
-                MySqlCommand specialityIns = new MySqlCommand("INSERT INTO timetabledb.speciality (speciality_name,abbreviated_speciality) VALUES (@speciality_name,@abbreviated_speciality);", connection);
+                MySqlCommand specialityIns = new MySqlCommand("INSERT INTO timetabledb.speciality (name_speciality,abbreviated_speciality) VALUES (@speciality_name,@abbreviated_speciality);", connection);
                 specialityIns.Parameters.AddWithValue("@speciality_name", speciality_name);
                 specialityIns.Parameters.AddWithValue("@abbreviated_speciality", abbreviated_speciality);
                 specialityIns.Prepare();
@@ -238,7 +238,7 @@ namespace Server
             {
                 connection.Open();
                 //study group table fill
-                MySqlCommand study_groupsIns = new MySqlCommand("INSERT INTO timetabledb.study_groups (group_name,id_faculty,id_speciality,course,education_form) " +
+                MySqlCommand study_groupsIns = new MySqlCommand("INSERT INTO timetabledb.study_groups (name_group,id_faculty,id_speciality,course,form_education) " +
                     "VALUES (@group_name,@id_faculty,@id_speciality,@course,@education_form);", connection);
                 study_groupsIns.Parameters.AddWithValue("@group_name", group_name);
                 study_groupsIns.Parameters.AddWithValue("@id_faculty", id_faculty);
