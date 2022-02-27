@@ -10,7 +10,9 @@ namespace Server.Controllers
     {
         public GetController(HttpListenerContext context, SQLConnector con)
         {
+            DBSelectsFuncs sel = new DBSelectsFuncs(con.Connection);
             HttpListenerResponse response = context.Response;
+            HttpListenerRequest request = context.Request;
 
             switch (context.Request.RawUrl)
             {
@@ -23,7 +25,7 @@ namespace Server.Controllers
                     break;
                 case "/timetable":
                     {
-                        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(con.SelectTimeTable());
+                        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(sel.getAll());
                         response.ContentLength64 = buffer.Length;
                         response.StatusCode = (int)HttpStatusCode.OK;
                         Stream output = response.OutputStream;
@@ -31,6 +33,20 @@ namespace Server.Controllers
                         output.Close();
                     }
                     break;
+                
+                case "/professors":
+                    {
+                        System.Collections.Specialized.NameValueCollection headers = request.Headers;
+                        string value = headers["ProfessorId"];
+                        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(sel.getLessonsByProffesor(Convert.ToInt32(value)));
+                        response.ContentLength64 = buffer.Length;
+                        response.StatusCode = (int)HttpStatusCode.OK;
+                        Stream output = response.OutputStream;
+                        output.Write(buffer, 0, buffer.Length);
+                        output.Close();
+                    }
+                    break;
+
                 default:
                     {
                         response.StatusCode = (int)HttpStatusCode.NotFound;
