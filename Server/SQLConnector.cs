@@ -14,13 +14,16 @@ namespace Server
     public class SQLConnector
     {
         public MySqlConnection Connection { get; private set; }
-        private string ConnectionPath = "server=127.0.0.1;port=3306;user=TimetableAdmin;password=Aboba228"; // TODO: Получение пути подключения из файла
+        private string ConnectionPath; // TODO: Получение пути подключения из файла
 
         /// <summary>
         /// Конструктор, при создании объекта будет проверена возможность осуществить подключение
         /// </summary>
         public SQLConnector() 
         {
+            var config = new ConfigInfo();
+            ConnectionPath = config.ConnectionString();
+
             Connection = new MySqlConnection(ConnectionPath);
             try
             {
