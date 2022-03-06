@@ -34,18 +34,18 @@ namespace Server.Controllers
                     }
                     break;
                 
-                case "/professors":
-                    {
-                        System.Collections.Specialized.NameValueCollection headers = request.Headers;
-                        string value = headers["ProfessorId"];
-                        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(sel.getLessonsByProffesor(Convert.ToInt32(value)));
-                        response.ContentLength64 = buffer.Length;
-                        response.StatusCode = (int)HttpStatusCode.OK;
-                        Stream output = response.OutputStream;
-                        output.Write(buffer, 0, buffer.Length);
-                        output.Close();
-                    }
-                    break;
+                //case "/professors":
+                //    {
+                //        System.Collections.Specialized.NameValueCollection headers = request.Headers;
+                //        string value = headers["ProfessorId"];
+                //        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(sel.getLessonsByProffesor(Convert.ToInt32(value)));
+                //        response.ContentLength64 = buffer.Length;
+                //        response.StatusCode = (int)HttpStatusCode.OK;
+                //        Stream output = response.OutputStream;
+                //        output.Write(buffer, 0, buffer.Length);
+                //        output.Close();
+                //    }
+                //    break;
 
                 default:
                     {
