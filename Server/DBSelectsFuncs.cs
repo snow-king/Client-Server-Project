@@ -39,10 +39,10 @@ namespace Server
                 profSel.Parameters.AddWithValue("@professorPatronymic", professorPatronymic);
                 profSel.Prepare();
                 MySqlDataReader reader = profSel.ExecuteReader();
-
+                int lessNum = 0;
                 while (reader.Read())
                 {
-                    res +=
+                    /*res +=
                         $" name: {reader[0]}\n" +
                         $" surname: {reader[1]}\n" +
                         $" patronymic: {reader[2]}\n" +
@@ -55,6 +55,17 @@ namespace Server
                         $" weekday: {reader[9]}\n" +
                         $" week_parity: {reader[10]}\n"+
                         $" frame: {reader[11]}\n\n";
+                    i++;*/
+                    lessNum++;
+                    res += "   Занятие №"+lessNum+ Environment.NewLine +
+                        "Дисциплина : "+reader[3] + Environment.NewLine +
+                        "Аудитория : "+reader[11]+"-"+reader[4] + Environment.NewLine +
+                        "Начало занятия : "+reader[5] + Environment.NewLine +
+                        "Конец занятия : "+reader[6] + Environment.NewLine +
+                        "Учебная группа : "+reader[8] + Environment.NewLine +
+                        "ФИО Преподавателя : " + reader[1] + " " + reader[0] + " " + reader[2] + Environment.NewLine +
+                        "День недели : " +reader[9] + Environment.NewLine +
+                        "Тип недели : "+reader[10] + Environment.NewLine+Environment.NewLine;
 
                 }
             }
@@ -104,9 +115,10 @@ namespace Server
                 profSel.Prepare();
                 MySqlDataReader reader = profSel.ExecuteReader();
 
+                int lessNum = 0;
                 while (reader.Read())
                 {
-                    res +=
+                    /*res +=
                         $" name: {reader[0]}\n" +
                         $" surname: {reader[1]}\n" +
                         $" patronymic: {reader[2]}\n" +
@@ -117,8 +129,19 @@ namespace Server
                         $" lesson_type: {reader[7]}" + "\n" +
                         $" group: {reader[8]}\n" +
                         $" weekday: {reader[9]}\n" +
-                        $" week_parity: {reader[10]}\n" +
+                        $" week_parity: {reader[10]}\n"+
                         $" frame: {reader[11]}\n\n";
+                    i++;*/
+                    lessNum++;
+                    res += "   Занятие №" + lessNum + Environment.NewLine +
+                        "Дисциплина : " + reader[3] + Environment.NewLine +
+                        "Аудитория : " + reader[11] + "-" + reader[4] + Environment.NewLine +
+                        "Начало занятия : " + reader[5] + Environment.NewLine +
+                        "Конец занятия : " + reader[6] + Environment.NewLine +
+                        "Учебная группа : " + reader[8] + Environment.NewLine +
+                        "ФИО Преподавателя : " + reader[1] + " " + reader[0] + " " + reader[2] + Environment.NewLine +
+                        "День недели : " + reader[9] + Environment.NewLine +
+                        "Тип недели : " + reader[10] + Environment.NewLine + Environment.NewLine;
 
                 }
             }
@@ -159,9 +182,10 @@ namespace Server
                 groupSel.Prepare();
                 MySqlDataReader reader = groupSel.ExecuteReader();
 
+                int lessNum = 0;
                 while (reader.Read())
                 {
-                    res +=
+                    /*res +=
                         $" name: {reader[0]}\n" +
                         $" surname: {reader[1]}\n" +
                         $" patronymic: {reader[2]}\n" +
@@ -172,8 +196,19 @@ namespace Server
                         $" lesson_type: {reader[7]}" + "\n" +
                         $" group: {reader[8]}\n" +
                         $" weekday: {reader[9]}\n" +
-                        $" week_parity: {reader[10]}\n" +
+                        $" week_parity: {reader[10]}\n"+
                         $" frame: {reader[11]}\n\n";
+                    i++;*/
+                    lessNum++;
+                    res += "   Занятие №" + lessNum + Environment.NewLine +
+                        "Дисциплина : " + reader[3] + Environment.NewLine +
+                        "Аудитория : " + reader[11] + "-" + reader[4] + Environment.NewLine +
+                        "Начало занятия : " + reader[5] + Environment.NewLine +
+                        "Конец занятия : " + reader[6] + Environment.NewLine +
+                        "Учебная группа : " + reader[8] + Environment.NewLine +
+                        "ФИО Преподавателя : " + reader[1] + " " + reader[0] + " " + reader[2] + Environment.NewLine +
+                        "День недели : " + reader[9] + Environment.NewLine +
+                        "Тип недели : " + reader[10] + Environment.NewLine + Environment.NewLine;
 
                 }
             }
@@ -219,9 +254,10 @@ namespace Server
                 groupSel.Prepare();
                 MySqlDataReader reader = groupSel.ExecuteReader();
 
+                int lessNum = 0;
                 while (reader.Read())
                 {
-                    res +=
+                    /*res +=
                         $" name: {reader[0]}\n" +
                         $" surname: {reader[1]}\n" +
                         $" patronymic: {reader[2]}\n" +
@@ -232,8 +268,19 @@ namespace Server
                         $" lesson_type: {reader[7]}" + "\n" +
                         $" group: {reader[8]}\n" +
                         $" weekday: {reader[9]}\n" +
-                        $" week_parity: {reader[10]}\n" +
+                        $" week_parity: {reader[10]}\n"+
                         $" frame: {reader[11]}\n\n";
+                    i++;*/
+                    lessNum++;
+                    res += "   Занятие №" + lessNum + Environment.NewLine +
+                        "Дисциплина : " + reader[3] + Environment.NewLine +
+                        "Аудитория : " + reader[11] + "-" + reader[4] + Environment.NewLine +
+                        "Начало занятия : " + reader[5] + Environment.NewLine +
+                        "Конец занятия : " + reader[6] + Environment.NewLine +
+                        "Учебная группа : " + reader[8] + Environment.NewLine +
+                        "ФИО Преподавателя : " + reader[1] + " " + reader[0] + " " + reader[2] + Environment.NewLine +
+                        "День недели : " + reader[9] + Environment.NewLine +
+                        "Тип недели : " + reader[10] + Environment.NewLine + Environment.NewLine;
 
                 }
             }
@@ -277,9 +324,10 @@ namespace Server
                 classSel.Prepare();
                 MySqlDataReader reader = classSel.ExecuteReader();
 
+                int lessNum = 0;
                 while (reader.Read())
                 {
-                    res +=
+                    /*res +=
                         $" name: {reader[0]}\n" +
                         $" surname: {reader[1]}\n" +
                         $" patronymic: {reader[2]}\n" +
@@ -290,8 +338,19 @@ namespace Server
                         $" lesson_type: {reader[7]}" + "\n" +
                         $" group: {reader[8]}\n" +
                         $" weekday: {reader[9]}\n" +
-                        $" week_parity: {reader[10]}\n" +
+                        $" week_parity: {reader[10]}\n"+
                         $" frame: {reader[11]}\n\n";
+                    i++;*/
+                    lessNum++;
+                    res += "   Занятие №" + lessNum + Environment.NewLine +
+                        "Дисциплина : " + reader[3] + Environment.NewLine +
+                        "Аудитория : " + reader[11] + "-" + reader[4] + Environment.NewLine +
+                        "Начало занятия : " + reader[5] + Environment.NewLine +
+                        "Конец занятия : " + reader[6] + Environment.NewLine +
+                        "Учебная группа : " + reader[8] + Environment.NewLine +
+                        "ФИО Преподавателя : " + reader[1] + " " + reader[0] + " " + reader[2] + Environment.NewLine +
+                        "День недели : " + reader[9] + Environment.NewLine +
+                        "Тип недели : " + reader[10] + Environment.NewLine + Environment.NewLine;
 
                 }
             }
@@ -339,9 +398,10 @@ namespace Server
                 classSel.Prepare();
                 MySqlDataReader reader = classSel.ExecuteReader();
 
+                int lessNum = 0;
                 while (reader.Read())
                 {
-                    res +=
+                    /*res +=
                         $" name: {reader[0]}\n" +
                         $" surname: {reader[1]}\n" +
                         $" patronymic: {reader[2]}\n" +
@@ -352,8 +412,19 @@ namespace Server
                         $" lesson_type: {reader[7]}" + "\n" +
                         $" group: {reader[8]}\n" +
                         $" weekday: {reader[9]}\n" +
-                        $" week_parity: {reader[10]}\n" +
+                        $" week_parity: {reader[10]}\n"+
                         $" frame: {reader[11]}\n\n";
+                    i++;*/
+                    lessNum++;
+                    res += "   Занятие №" + lessNum + Environment.NewLine +
+                        "Дисциплина : " + reader[3] + Environment.NewLine +
+                        "Аудитория : " + reader[11] + "-" + reader[4] + Environment.NewLine +
+                        "Начало занятия : " + reader[5] + Environment.NewLine +
+                        "Конец занятия : " + reader[6] + Environment.NewLine +
+                        "Учебная группа : " + reader[8] + Environment.NewLine +
+                        "ФИО Преподавателя : " + reader[1] + " " + reader[0] + " " + reader[2] + Environment.NewLine +
+                        "День недели : " + reader[9] + Environment.NewLine +
+                        "Тип недели : " + reader[10] + Environment.NewLine + Environment.NewLine;
 
                 }
             }
