@@ -8,8 +8,9 @@ class Listener
 {
     public static async Task Listen(SQLConnector con)
     {
+        var config = new ConfigInfo();
         HttpListener listener = new HttpListener();
-        listener.Prefixes.Add("http://localhost:9911/");
+        listener.Prefixes.Add(config.UrlString());
         listener.Start();
         Console.WriteLine("Ожидание подключений...");
 
