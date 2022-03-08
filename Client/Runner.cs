@@ -27,10 +27,65 @@ namespace Client
                         Console.ResetColor();
                         Int32.TryParse(Console.ReadLine(), out int Id);
                         Console.WriteLine("");
-                        reciver.GetInfo(Id);
+                        reciver.GetProfessors();
                         Console.ForegroundColor = ConsoleColor.Cyan;
                         Console.WriteLine("Вывод закончен!");
                         Console.ResetColor();
+                        break;
+                    case 11:
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.Write("Введите нужный Id:");
+                        Console.ResetColor();
+                        //Int32.TryParse(Console.ReadLine(), out int Id);
+                        Console.WriteLine("");
+                        reciver.GetProfessorsDate();
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine("Вывод закончен!");
+                        Console.ResetColor();
+                        break;
+                    case 12:
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.Write("Введите нужный Id:");
+                        Console.ResetColor();
+                        //Int32.TryParse(Console.ReadLine(), out int Id);
+                        Console.WriteLine("");
+                        reciver.GetClassroom();
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine("Вывод закончен!");
+                        Console.ResetColor();
+                        break;
+                    case 13:
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.Write("Введите нужный Id:");
+                        Console.ResetColor();
+                        //Int32.TryParse(Console.ReadLine(), out int Id);
+                        Console.WriteLine("");
+                        reciver.GetClassroomDate();
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine("Вывод закончен!");
+                        Console.ResetColor();
+                        break;
+                    case 14:
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.Write("Введите нужный Id:");
+                        Console.ResetColor();
+                        //Int32.TryParse(Console.ReadLine(), out int Id);
+                        Console.WriteLine("");
+                        reciver.GetGroup();
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine("Вывод закончен!");
+                        Console.ResetColor();
+                        break;
+                    case 15:
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.Write("Введите нужный Id:");
+                        Console.ResetColor();
+                        //Int32.TryParse(Console.ReadLine(), out int Id);
+                        Console.WriteLine("");
+                        reciver.GetGroupDate();
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine("Вывод закончен!");
+                        Console.ResetColor();                        
                         break;
                     case 2:
                         Console.WriteLine("Введите путь к файлу:");

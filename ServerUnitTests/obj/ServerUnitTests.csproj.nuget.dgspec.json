@@ -124,6 +124,10 @@
               "target": "Package",
               "version": "[2.1.2, )"
             },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "YamlDotNet": {
               "target": "Package",
               "version": "[11.2.1, )"

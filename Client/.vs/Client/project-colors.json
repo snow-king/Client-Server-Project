@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8e98cc98-5c5d-4511-a2dc-fedefa9d8d45": {
+      "ProjectGuid": "8e98cc98-5c5d-4511-a2dc-fedefa9d8d45",
+      "DisplayName": "Client",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
