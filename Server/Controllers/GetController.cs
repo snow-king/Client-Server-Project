@@ -96,7 +96,7 @@ namespace Server.Controllers
 
                 case "/classroomDate":
                     {
-                        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(sel.getLessonsByClassromDate(request.QueryString["classroom"], request.QueryString["frame"], request.QueryString["weedDay"], request.QueryString["parity"]));
+                        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(sel.getLessonsByClassromDate(request.QueryString["classroom"], request.QueryString["frame"], request.QueryString["weekDay"], request.QueryString["parity"]));
                         response.ContentLength64 = buffer.Length;
                         response.StatusCode = (int)HttpStatusCode.OK;
                         Stream output = response.OutputStream;
