@@ -11,5 +11,9 @@ namespace Server
                    $"user={ConfigurationManager.AppSettings.Get("User")};" +
                    $"password={ConfigurationManager.AppSettings.Get("Password")}";
         }
+        public string UrlString()
+        {
+            return ConfigurationManager.AppSettings.Get("Url");
+        }
     }
 }
