@@ -1,15 +1,17 @@
-﻿using System;
-using System.IO;
-using Server.Controllers;
+using System; //(•ิ_•ิ)? (•ิ_•ิ)? (•ิ_•ิ)?
+using System.IO; //(•ิ_•ิ)? (•ิ_•ิ)? (•ิ_•ิ)?
+using Server.Controllers; //(•ิ_•ิ)? (•ิ_•ิ)? (•ิ_•ิ)?
 using System.Net;
-using Server.Models;
-using YamlDotNet.Serialization;
+using Server.Models; //(•ิ_•ิ)? (•ิ_•ิ)? (•ิ_•ิ)?
+using YamlDotNet.Serialization; //(•ิ_•ิ)? (•ิ_•ิ)? (•ิ_•ิ)?
 
 namespace Server
 {
-
+    
+    // класс парсинга Http 
     class HttpParser
     {
+        //зачем ты создан (•ิ_•ิ)? (•ิ_•ิ)? (•ิ_•ิ)?
         public class RespBuilder
         {
             public int StatusCode { get; set; }
@@ -18,6 +20,8 @@ namespace Server
         }
 
         //string req;
+        // Парсим запрос и делим разделяем на GET и POST ( не понимаю зачем всё пихать в КОНСТРУКТОР класса,лучше бы тогда
+        // статик класс и методы сделали , но об этом с
         public HttpParser(HttpListenerContext context, SQLConnector con)
         {
             /*RespBuilder rb = new RespBuilder();*/
@@ -54,3 +58,4 @@ namespace Server
         }        */
     }
 }
+
