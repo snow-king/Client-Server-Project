@@ -3,11 +3,25 @@ using System.Net.Http.Headers;
 
 namespace Client
 {
+	/**
+	Класс для отправки POST запросов.
+	
+	+-------------------
+	В коде нет документации.
+	*/
     public class Sender
     {
         string Url = "http://localhost:9911/timetable"; //TODO: добавить адрес сервера
-
-
+		
+        /**Метод для отправки yaml файла.
+        Создает с помощью метода Create HTTP-запрос типа «POST»,
+	    используя URL-адрес в качестве параметра. Считывая yaml файл,
+	    отправляет POST запрос, который представляет собой массив
+	    байтов. Получает ответ от сервера.
+		
+		+-------------------
+		В коде дублируется url адрес, можно оставить один
+	    */
         public void UploadYamlFile(string FilePath) 
         {
             byte[] buffer = new byte[4096];
