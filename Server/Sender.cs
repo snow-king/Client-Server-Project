@@ -1,13 +1,19 @@
-﻿using System.Net;
-using System.Net.Http.Headers;
+using System;
+using System.IO;
+using System.Net;
+using System.Net.Http.Headers; //(•ิ_•ิ)? (•ิ_•ิ)? (•ิ_•ิ)?
 
 namespace Client
 {
+    // класс отправки запросов  ( без понятия зачем тут юрл константой, когда можно это в конструкторе задавать и
+    // делать константной приватной поле )
+    //  UploadYamlFile() - на вход получает путь файла который мы загружаем и юрл куда отправляем ямл файл 
     public class Sender
     {
         string Url = "http://localhost:9911/";
-
-
+        
+        // Класс отправки  Yaml на клиент
+        // на вход получает путь файла который мы загружаем и юрл куда отправляем ямл файл 
         public void UploadYamlFile(string UrlPath, string FilePath) 
         {
             byte[] buffer = new byte[4096];
