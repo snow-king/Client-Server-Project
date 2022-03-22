@@ -5,13 +5,26 @@ namespace Server
 {
     public class DBSelectsFuncs
     {
+		/*
+		*Во всех методах используются подготовленные запросы
+		*MySqlCommand.Parameters.AddWithValue() - Добавляет значение в конец коллекции SqlParameterCollection, 
+											  эти значения являются фактическими данными, которые должны быть внесены в таблцы,
+		*MySqlCommand.Prepare() - Создает подготовленную версию команды на экземпляре SQL Server,
+		*MySqlCommand.ExecuteReader() - Отправляет CommandText в Connection и строит SqlDataReader.
+		*/
         MySqlConnection connection = null;
         public DBSelectsFuncs(MySqlConnection gettedConnection)
         {
             connection = gettedConnection;
         }
         public String getLessonsByProffesorNSR(String proffesorName, String professorSurname, String professorPatronymic) {
-            //print all lessons for selected by name, surname, patronymic proffesssor
+            //print all lessons for selected by name, surname, patronymic professor
+			/*
+			*Печатает расписание, в кототрые ведет преподаватель с указанными именем (name), фамилией(surname) и отчеством (patronymic).
+			*Данные получаем методом Select используя указанные выше параметры.
+			*Рекомендуется изменить имя метода, так как правильно будет не Proffesor, а Professor. 
+			*Также стоит изменить имя перменной proffesorName по тому же принципу.
+			*/
             String res = "";
             try
             {
@@ -83,6 +96,11 @@ namespace Server
         public String getLessonsByProffesorNSRDate(String proffesorName, String professorSurname, String professorPatronymic,String weekday,String parity)
         {
             //print all lessons for selected by name, surname, patronymic proffesssor
+			/*
+			*Печатает расписание, в кототрые ведет преподаватель с указанными именем (name), фамилией(surname) и отчеством (patronymic),
+			*в указанный день недели(weekday) и с указанием четности недели(parity).
+			*Данные получаем методом Select используя указанные выше параметры.
+			*/
             String res = "";
             try
             {
@@ -158,6 +176,10 @@ namespace Server
         public String getLessonsByGroup(String groupName)
         {
             //print all lessons for selected group
+			/*
+			*Печатает расписание, для заданной группы (groupName),
+			*Данные получаем методом Select используя указанные выше параметры.
+			*/
             String res = "";
             try
             {
@@ -226,6 +248,10 @@ namespace Server
         public String getLessonsByGroupDate(String groupName, String weekday, String parity)
         {
             //print all lessons for selected group
+			/*
+			*Печатает расписание, для заданной группы (groupName), в заданный день недели(weekday) и с заданой четностью/нечетностью недели(parity),
+			*Данные получаем методом Select используя указанные выше параметры.
+			*/
             String res = "";
             try
             {
@@ -298,6 +324,10 @@ namespace Server
         public String getLessonsByClassrom(String classroom, String frame)
         {
             //print all lessons for selected by classroom
+			/*
+			*Печатает расписание, для заданного кабинета(classroom) с указанием корпуса(frame),
+			*Данные получаем методом Select используя указанные выше параметры.
+			*/
             String res = "";
             try
             {
@@ -368,6 +398,10 @@ namespace Server
         public String getLessonsByClassromDate(String classroom, String frame, String weekday, String parity)
         {
             //print all lessons for selected by classroom
+			/*
+			*Печатает расписание, для заданного кабинета(classroom) с указанием корпуса(frame), в заданный день недели(weekday) с заданной четностью недели(parity),
+			*Данные получаем методом Select используя указанные выше параметры.
+			*/
             String res = "";
             try
             {
@@ -441,6 +475,9 @@ namespace Server
         public String getAll()
         {
             //print all from timetable
+			/*
+			*Печатает все данные из таблицы Расписание (timetable)
+			*/
             String res = "";
             try
             {

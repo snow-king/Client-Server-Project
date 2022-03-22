@@ -5,13 +5,25 @@ using Server.Models;
 namespace Server
 {
     public class DBDataModifyFuncs
+    /*
+	*Данный класс используется для занесения данных в таблицы
+	*Во всех методах используются подготовленные запросы
+	*MySqlCommand.Parameters.AddWithValue() - Добавляет значение в конец коллекции SqlParameterCollection, 
+											  эти значения являются фактическими данными, которые должны быть внесены в таблцы,
+	*MySqlCommand.Prepare() - Создает подготовленную версию команды на экземпляре SQL Server.,
+	*MySqlCommand.ExecuteNonQuery() - Выполняет для подключения инструкцию Transact-SQL и возвращает количество задействованных в инструкции строк..
+	*
+    *connection - коннектор для подключения к базе данных
+    */
+
     {
         MySqlConnection connection = null;
         public DBDataModifyFuncs(MySqlConnection gettedConnection)
         {
             connection = gettedConnection;
         }
-
+		/*Данные используемые для XML документация*/
+		
         /// <summary>
         /// Используется для занесения данных в таблицу Timetable
         /// </summary>
@@ -20,11 +32,23 @@ namespace Server
         /// <param name="dayid"></param>
         /// <param name="roomid"></param>
         /// <param name="groupid"></param>
-        /// <param name="proffesorid"></param>
+        /// <param name="professorid"></param>
         /// <param name="lessonid"></param>
         /// <param name="lesstypeid"></param>
         public void timetableIns(int lesstimeid, int chetid,int dayid, int roomid,int groupid, int proffesorid, int lessonid,int lesstypeid)
         {
+			/*
+			*Использую подготовленный запрос, вносим в таблицу timetable(Расписание) о:
+			*lesstimeid - времени занятия,
+			*chetid - четности/нечетности недели,
+			*dayid - дне,
+			*roomid - кабинете,
+			*groupid - группе,
+			*proffesorid - преподавателе,
+			*lessonid - занятии,
+			*lesstypeid - виде занятия.
+			*Ловятся ошибки конструкцией try-catch. Параметры указываются в явном виде при вызове данного метода.			
+			*/
             try
             {
                 connection.Open();
@@ -57,6 +81,10 @@ namespace Server
         /// <param name="data">Модель данных десериализованной из YAML-строки</param>
         public void timetableIns(Timetable data)
         {
+			/*
+			*Использую подготовленный запрос, вносим в данные полученные из YAML-строки в таблицу timetable(Расписание)
+			*В отличие от прошлого метода, параметры передаются в виде специализированного объекта.			
+			*/
             try
             {
                 connection.Open();
@@ -87,6 +115,11 @@ namespace Server
 
         public void classroomIns(int classroom, String frame)
         {
+			/*
+			*В таблицу Кабинеты (classroom) вставляем данные:
+			*classroom - номер кабинета,
+			*frame - корпус здания
+			*/
             try
             {
                 connection.Open();
@@ -108,6 +141,10 @@ namespace Server
         }
         public void disciplineIns(String discipline_name)
         {
+			/*
+			*В таблицу Дисциплина (discipline) вставляем данные:
+			*discipline_name - название дисциплины
+			*/
             try
             {
                 connection.Open();
@@ -128,6 +165,10 @@ namespace Server
         }
         public void facultyIns(String faculty_name)
         {
+			/*
+			*В таблицу Факультет (faculty) вставляем данные:
+			*faculty_name - название факультета
+			*/
             try
             {
                 connection.Open();
@@ -148,6 +189,15 @@ namespace Server
         }
         public void lesson_timeIns(int lesson_time, String lesson_start, String lesson_finish)
         {
+			/*
+			*В таблицу Время занятий (lesson_time) вставляем данные:
+			*lesson_time - порядковый номер занятия в течения дня,
+			*lesson_start - время начала занятия,
+			*lesson_finish - время конца занятия.
+			*
+			*Если база данных уже заполнена, вносить новые данные в эту таблицу явялется не желательным,
+			*так как это нарушает логику функционирования унивреситета, все время занятий должно быть заранее внесено, а новых не должно быть предусмотренно 		
+			*/
             try
             {
                 connection.Open();
@@ -168,8 +218,17 @@ namespace Server
                 connection.Close();
             }
         }
-        public void lesson_typeIns(String inData)
+        public void lesson_typeIns(String lesson_type)
         {
+			/*
+			*В таблицу Вид занятия (lesson_type) вставляем данные:
+			*lesson_type - тип занятия.
+			*
+			*На данный момент внос новых данных в эту таблицу не является необходимым, 
+			*перечень видов занятий полный и исчерпывающий (лекции, семинары, лабораторные).
+			*Может использоваться только для новой, пустой таблицы.
+			*Во время ревью была исправлена ошибка по несовподению имени передаваемого параметра и имени используемого в методе.
+			*/
             try
             {
                 connection.Open();
@@ -191,6 +250,12 @@ namespace Server
         }
         public void professorsIns(String name,String surname,String patronymic)
         {
+			/*
+			*В таблицу Преподаватели (professors) вставляем данные:
+			*name - имя преподавателя,
+			*surname - фамилия преподавателя,
+			*patronymic - отчество преподавателя.
+			*/
             try
             {
                 connection.Open();
@@ -213,6 +278,11 @@ namespace Server
         }
         public void specialityIns(String speciality_name, String abbreviated_speciality)
         {
+			/*
+			*В таблицу Специальности (speciality) вставляем данные:
+			*speciality_name - название специальности,
+			*abbreviated_speciality - аббривиатура специальности.
+			*/
             try
             {
                 connection.Open();
@@ -234,6 +304,14 @@ namespace Server
         }
         public void study_groupsIns(String group_name,int id_faculty,int id_speciality,int course,String education_form)
         {
+			/*
+			*В таблицу Учебные группы (study_groups) вставляем данные:
+			*group_name - навзвание группы,
+			*id_faculty - факультет,
+			*id_speciality - специальность,
+			*course - номер курса,
+			*education_form - форма обучения.
+			*/
             try
             {
                 connection.Open();
@@ -257,8 +335,14 @@ namespace Server
                 connection.Close();
             }
         }
-        public void week_dayIns(String inData)
+        public void week_dayIns(String week_day)
         {
+			/*
+			*В таблицу День недели(week_day) вносим данные:
+			*week_day - название деня недели.
+			*Метод может использоваться только для незаполненых таблиц.
+			*Если таблица День недели содержит все семь дней недели, данный метод является избыточным и вредным.
+			*/
             try
             {
                 connection.Open();
@@ -278,8 +362,14 @@ namespace Server
                 connection.Close();
             }
         }
-        public void week_parityIns(String inData)
+        public void week_parityIns(String week_parity)
         {
+			/*
+			*В таблицу Четность недели(week_parity) вносим данные:
+			*week_parity - четность или нечетность недели.
+			*Метод может использоваться только для незаполненых таблиц.
+			*Если таблица Четность недели содержит два вида необходимых данных (чет и нечет), данный метод является избыточным и вредным.
+			*/
             try
             {
                 connection.Open();
